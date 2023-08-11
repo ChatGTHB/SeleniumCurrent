@@ -20,10 +20,10 @@ public class _02_FindingById {
  */
 
         WebElement nameBox = driver.findElement(By.id("first_8")); // find element by id
-        nameBox.sendKeys("ismet"); // send text to boxes
+        nameBox.sendKeys("Kerem"); // send text to boxes
 
         WebElement soyadKutusu = driver.findElement(By.id("last_8")); // find element by id
-        soyadKutusu.sendKeys("temur"); // send text to boxes
+        soyadKutusu.sendKeys("Said"); // send text to boxes
 
         MyFunction.wait(5);
         driver.quit();
