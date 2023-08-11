@@ -19,4 +19,9 @@ public class _01_OpeningWebsite {
         //driver.close(); // closes the currently active open browser, erases from memory
         driver.quit(); // While the program is running, it both closes and deletes all opened browsers from memory
     }
+
+/**
+ * To remove the redness that is not an error but occurs when you run:
+ * org.slf4j:slf4j-nop:1.7.30    ---> Add to project library from maven repository
+ */
 }
