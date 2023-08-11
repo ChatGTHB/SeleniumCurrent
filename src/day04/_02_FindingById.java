@@ -22,8 +22,8 @@ public class _02_FindingById {
         WebElement nameBox = driver.findElement(By.id("first_8")); // find element by id
         nameBox.sendKeys("Kerem"); // send text to boxes
 
-        WebElement soyadKutusu = driver.findElement(By.id("last_8")); // find element by id
-        soyadKutusu.sendKeys("Said"); // send text to boxes
+        WebElement surnameBox = driver.findElement(By.id("last_8")); // find element by id
+        surnameBox.sendKeys("Said"); // send text to boxes
 
         MyFunction.wait(5);
         driver.quit();
