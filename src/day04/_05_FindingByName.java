@@ -12,7 +12,7 @@ public class _05_FindingByName {
         WebDriver driver = new ChromeDriver();
         driver.get("https://form.jotform.com/221934510376353");
 
-        // 1)- Find textBoxes with name and fill in your first and last name
+        // 1)- Find text boxes with name and fill in your first and last name
         // 2)- Find and click the button with id or name
 
         WebElement firstName=driver.findElement(By.name("q8_name[first]")); // find by name
