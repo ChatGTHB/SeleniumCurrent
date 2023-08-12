@@ -8,20 +8,21 @@ import utility.MyFunction;
 
 public class _05_FindingByName {
     public static void main(String[] args) {
+
         WebDriver driver = new ChromeDriver();
         driver.get("https://form.jotform.com/221934510376353");
 
-        // textBox ları name ile bulup adınızı ve soyadınız doldurun
-        // ve butonu da id veya name ile bulup tıklatın
+        // 1)- Find textBoxes with name and fill in your first and last name
+        // 2)- Find and click the button with id or name
 
-        WebElement firstName=driver.findElement(By.name("q8_name[first]")); //name ile bulma
-        firstName.sendKeys("ismet");
+        WebElement firstName=driver.findElement(By.name("q8_name[first]")); // find by name
+        firstName.sendKeys("Kerem");
 
-        WebElement lastName=driver.findElement(By.name("q8_name[last]")); //name ile bulma
-        lastName.sendKeys("temur");
+        WebElement lastName=driver.findElement(By.name("q8_name[last]")); // find by name
+        lastName.sendKeys("Said");
 
-        WebElement btnSubmit=driver.findElement(By.id("input_2"));
-        btnSubmit.click();
+        WebElement submitButton=driver.findElement(By.id("input_2"));
+        submitButton.click();
 
         MyFunction.wait(5);
         driver.quit();
