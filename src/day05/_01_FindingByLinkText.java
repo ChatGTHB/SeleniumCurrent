@@ -27,9 +27,9 @@ public class _01_FindingByLinkText {
         WebElement link2=driver.findElement(By.partialLinkText("Süper Fiyat"));
         System.out.println("link2.getText() = " + link2.getText());
 
-        System.out.println("myOrdersLink.href = " + myOrdersLink.getAttribute("href"));
+        System.out.println("myOrdersLink.href = "  + myOrdersLink.getAttribute("href"));
         System.out.println("myOrdersLink.title = " + myOrdersLink.getAttribute("title"));
-        System.out.println("myOrdersLink.rel = " + myOrdersLink.getAttribute("rel"));
+        System.out.println("myOrdersLink.rel = "   + myOrdersLink.getAttribute("rel"));
 
         MyFunction.wait(5);
         driver.quit();
