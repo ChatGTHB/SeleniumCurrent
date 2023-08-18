@@ -11,7 +11,7 @@ public class BaseDriver {
 
     static {  // The condition of this is that it is extends and takes place in the first place.
         driver = new ChromeDriver();
-        //driver.manage().window().maximize(); // It maximizes the screen.
+        driver.manage().window().maximize(); // It maximizes the screen.
         driver.manage().timeouts().pageLoadTimeout(Duration.ofSeconds(30)); // 30 sec delay: time to load the page
         driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(30));  // 30 sec delay: time to find the element
     }
