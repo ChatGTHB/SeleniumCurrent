@@ -1,6 +1,5 @@
 package day05;
 
-
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
 import utility.BaseDriver;
