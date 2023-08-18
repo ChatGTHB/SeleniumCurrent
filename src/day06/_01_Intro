@@ -1,0 +1,75 @@
+CSS Selector
+div[id='message'][type='text']
+
+#id, .class
+
+> cocuklarda aramak için   >
+tüm çocuklarda aramak için space boşluk
+
++ bitişik kardeş için      +
+~ tüm kardeşler için       ~
+
+:nth-child(5)  -> 5.çocuk için kısaca
+
+^ ile başlayan
+$ ile biten
+* içinde geçen
+
+-------------
+<div>
+
+    <span> merhaba 1 </span>
+    <span> merhaba 2 </span>
+
+    <div>
+       <img src=logo.png>
+       <input type="text">
+    </div>
+
+</div>
+<div id="form">
+
+    <span> merhaba 1 </span> -> çocuk
+    <span> merhaba 2 </span> -> çocuk
+
+    <div> -> çocuk
+       <img src=logo.png>  -> torun
+       <input type="text"> -> torun
+    </div>
+
+</div>
+
+div cocukları :  çocukları -> span,span,div   >
+div tüm çocukları : çocuk+torun
+
+[id='form'] > span -> cocuklarından
+[id='form'] img    -> tüm alt elemanlardan img
+
+------------
+<div id="form">
+
+    <span id="m1"> merhaba 1 </span>
+    <span> merhaba 2 </span>  bitişik kardeşi
+
+    <div> -> çocuk
+       <img src=logo.png>
+       <input type="text">
+    </div>
+
+</div>
+
+[id='m1']+span ->  + bitişik kardeş
+[id='m1']+span+div
+[id='m1']~div  -> kardeşlerinden div
+-----------------
+u_ 7_bcC
+u 3_blX
+u 3_b8m
+
+id si u  ile başlayan
+id si _u  ile biten
+id sinden u geçen
+
+[id^='u']  -> ^ bununla başlayan
+[id$='u']  -> $ bununla biten
+[id*='u']  -> * içide bu geçen
