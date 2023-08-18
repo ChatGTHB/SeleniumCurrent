@@ -13,7 +13,9 @@ public class _01_FindingByLinkText {
 //    class -> By.class
 //
 //    partialLinkText with linkText works ONLY in -a- tags
+
     public static void main(String[] args) {
+
         WebDriver driver = new ChromeDriver();
         driver.get("https://www.hepsiburada.com/");
 
@@ -31,7 +33,6 @@ public class _01_FindingByLinkText {
 
         MyFunction.wait(5);
         driver.quit();
+
     }
-
-
 }
