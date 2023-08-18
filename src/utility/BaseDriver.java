@@ -5,30 +5,27 @@ import org.openqa.selenium.chrome.ChromeDriver;
 
 import java.time.Duration;
 
-
 public class BaseDriver {
+
     public static WebDriver driver; // SingletonDriver method
 
-    static{  //bunun sarti extends olmasi ve basta yer almasi mi
+    static {  // The condition of this is that it is extends and takes place in the first place.
         driver = new ChromeDriver();
-        //driver.manage().window().maximize(); // Ekranı max yapıyor.
-        driver.manage().timeouts().pageLoadTimeout(Duration.ofSeconds(20)); // 20 sn mühlet: sayfayı yükleme mühlet
-        driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(20));  // 20 sn mühlet: elementi bulma mühleti
+        //driver.manage().window().maximize(); // It maximizes the screen.
+        driver.manage().timeouts().pageLoadTimeout(Duration.ofSeconds(30)); // 30 sec delay: time to load the page
+        driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(30));  // 30 sec delay: time to find the element
     }
 
-    public static void BekleVeKapat(){
+    public static void waitAndClose() {
         MyFunction.wait(5);
         driver.quit();
     }
-
 }
 
+//  Java fast - Website slow
+//  It tries to find the java element, but the website is still loading, it says I couldn't find java before the site is loaded, and it ends,
+//  When trying to find web element (FindElement/s) -->
+//  Solution 1: we will give some time (20s)
 
-//  Java hızlı - Web sitesi yavaş
-// java elemanı bulmaya çalışıyor, ama web sitesi hala yuklenıyor. site yüklenmeden java bulamadım dıyor bıtırıyor,
-// Web elementı bulmaya calıstıgında (FindElement/s)
-//  çözüm 1 : biraz süre vereceğiz (20s)
-
-//  Thread.sleep(); -> javayı direkt verilen süre kadar durdurur. kac sanıye verırsen o kadar durdurur programı. Osebeple bu işimize yaramıyor. Bize buldugu zaman cıksın yanı mesela 20 sn verdık 10. sanıyede java buldun cık, 20 sn beklemesın ısterız
-//         bıde bu Thread.sleep ıyı kod degıldır mulakatta bundan bahsetme mesela.
-//  bunun yerıne driver.manage yapıp bunu MyFunc a atıcam oradan cagırıyorum her seferınde yazmayayım dıye
+//  Thread.sleep(); -> It stops Java directly for the given time. The more seconds you give, the more it stops the program. That's why it doesn't work for us.
+//  For example, we gave him 20 seconds to exit when he finds us, we want him to find java at 10 seconds and exit, not to wait 20 seconds.
