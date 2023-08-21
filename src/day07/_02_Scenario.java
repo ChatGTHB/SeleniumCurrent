@@ -100,11 +100,11 @@ public class _02_Scenario extends BaseDriver {
         System.out.println("total = " + total);
 
         // item total taken and converted to double
-        WebElement itemtotalElement = driver.findElement(By.xpath("//div[@class='summary_subtotal_label']"));
-        double itemtotal = Double.parseDouble(itemtotalElement.getText().replaceAll("[^0-9,.]", ""));
-        System.out.println("itemtotal = " + itemtotal);
+        WebElement itemTotalElement = driver.findElement(By.xpath("//div[@class='summary_subtotal_label']"));
+        double itemTotal = Double.parseDouble(itemTotalElement.getText().replaceAll("[^0-9,.]", ""));
+        System.out.println("itemTotal = " + itemTotal);
 
-        Assert.assertEquals("Values are not equal", total, itemtotal, 0.0);
+        Assert.assertEquals("Values are not equal", total, itemTotal, 0.0);
 
         waitAndClose();
     }
