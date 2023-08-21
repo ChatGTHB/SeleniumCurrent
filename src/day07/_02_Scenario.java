@@ -51,8 +51,8 @@ public class _02_Scenario extends BaseDriver {
         addToCart.click();
         MyFunction.wait(2);
 
-        WebElement btnBack = driver.findElement(By.xpath("//*[@id='back-to-products']"));
-        btnBack.click();
+        WebElement backButton = driver.findElement(By.xpath("//*[@id='back-to-products']"));
+        backButton.click();
         MyFunction.wait(2);
 
         //2. Product added to cart
@@ -64,8 +64,8 @@ public class _02_Scenario extends BaseDriver {
         addToCart2.click();
         MyFunction.wait(2);
 
-        WebElement sepet = driver.findElement(By.xpath("//a[@class='shopping_cart_link']"));
-        sepet.click();
+        WebElement cart = driver.findElement(By.xpath("//a[@class='shopping_cart_link']"));
+        cart.click();
         MyFunction.wait(2);
 
         WebElement buttonCheckOut = driver.findElement(By.xpath("//*[@id='checkout']"));
@@ -85,8 +85,8 @@ public class _02_Scenario extends BaseDriver {
         zipcode.sendKeys("323232");
         MyFunction.wait(1);
 
-        WebElement btnContinue = driver.findElement(By.xpath("//*[@id='continue']"));
-        btnContinue.click();
+        WebElement continueButton = driver.findElement(By.xpath("//*[@id='continue']"));
+        continueButton.click();
         MyFunction.wait(2);
 
         // Control of price totals of products
@@ -101,10 +101,10 @@ public class _02_Scenario extends BaseDriver {
 
         // item total taken and converted to double
         WebElement itemtotalElement = driver.findElement(By.xpath("//div[@class='summary_subtotal_label']"));
-        Double itemtotal = Double.parseDouble(itemtotalElement.getText().replaceAll("[^0-9,.]", ""));
+        double itemtotal = Double.parseDouble(itemtotalElement.getText().replaceAll("[^0-9,.]", ""));
         System.out.println("itemtotal = " + itemtotal);
 
-        Assert.assertTrue("Values are not equal", total == itemtotal);
+        Assert.assertEquals("Values are not equal", total, itemtotal, 0.0);
 
         waitAndClose();
     }
