@@ -11,8 +11,21 @@ import java.util.List;
 
 public class _02_Scenario extends BaseDriver {
 
+//     Scenario
+//     1- https://www.saucedemo.com/
+//     2- Do the login process.
+//     3- Click Sauce Labs Backpack and add to cart.
+//     4- Then go back (click Back to products)
+//     5- Click Sauce Labs Bolt T-Shirt and add to cart.
+//     6- Click to cart
+//     7- Click CheckOut
+//     8- Fill in the user information and click Continue
+//     9- Here, test with Assert whether the sum of the costs of each item is equal to the Item total below.
+//
+//     XPATH will be used entirely in this question.
+
     @Test
-    public void Sepet_Test1() {
+    public void Cart_Test1() {
 
         driver.get("https://www.saucedemo.com/");
 
@@ -61,11 +74,11 @@ public class _02_Scenario extends BaseDriver {
 
         // Entering user information
         WebElement firstname = driver.findElement(By.xpath("//input[@id='first-name']"));
-        firstname.sendKeys("Emrullah");
+        firstname.sendKeys("Kerem");
         MyFunction.wait(1);
 
         WebElement lastname = driver.findElement(By.xpath("//input[@id='last-name']"));
-        lastname.sendKeys("Yılmaz");
+        lastname.sendKeys("Said");
         MyFunction.wait(1);
 
         WebElement zipcode = driver.findElement(By.xpath("//input[@id='postal-code']"));
@@ -77,21 +90,21 @@ public class _02_Scenario extends BaseDriver {
         MyFunction.wait(2);
 
         // Control of price totals of products
-        List<WebElement> ucretler = driver.findElements(By.xpath("//div[@class='inventory_item_price']"));
+        List<WebElement> prices = driver.findElements(By.xpath("//div[@class='inventory_item_price']"));
 
-        double toplam = 0;
-        for (WebElement e : ucretler) {
-            System.out.println(e.getText());
-            toplam = toplam + Double.parseDouble(e.getText().replaceAll("[^0-9,.]", ""));
+        double total = 0;
+        for (WebElement price : prices) {
+            System.out.println(price.getText());
+            total = total + Double.parseDouble(price.getText().replaceAll("[^0-9,.]", ""));
         }
-        System.out.println("toplam = " + toplam);
+        System.out.println("total = " + total);
 
         // item total taken and converted to double
         WebElement itemtotalElement = driver.findElement(By.xpath("//div[@class='summary_subtotal_label']"));
         Double itemtotal = Double.parseDouble(itemtotalElement.getText().replaceAll("[^0-9,.]", ""));
         System.out.println("itemtotal = " + itemtotal);
 
-        Assert.assertTrue("Values are not equal", toplam == itemtotal);
+        Assert.assertTrue("Values are not equal", total == itemtotal);
 
         waitAndClose();
     }
