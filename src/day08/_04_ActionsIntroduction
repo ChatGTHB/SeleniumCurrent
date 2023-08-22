@@ -1,0 +1,14 @@
+Asked in interviews:
+
+What is Action Class, where is it used, how do you use it?
+
+ - right click, double click, hoverover, dragdrop
+   special keys, arrow keys... class that can do this.
+
+ - Used in WebElements
+
+ - Actions actions=new Actions(driver); // I want to take action in browser
+   Actions : doubleClick, rightClick, hoverover, dragdrop, special keys(ctrl,shift, yön tuş)
+
+
+ActionsGiriş
