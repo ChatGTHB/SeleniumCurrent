@@ -9,6 +9,3 @@ What is Action Class, where is it used, how do you use it?
 
  - Actions actions=new Actions(driver); // I want to take action in browser
    Actions : doubleClick, rightClick, hoverover, dragdrop, special keys(ctrl,shift, yön tuş)
-
-
-ActionsGiriş
