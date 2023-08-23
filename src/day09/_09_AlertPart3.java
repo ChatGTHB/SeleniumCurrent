@@ -24,9 +24,9 @@ public class _09_AlertPart3 extends BaseDriver {
         driver.switchTo().alert().accept(); // alert closed
 
         MyFunction.wait(2);
-        WebElement txtActual = driver.findElement(By.id("prompt-demo"));
+        WebElement textActual = driver.findElement(By.id("prompt-demo"));
 
-        Assert.assertTrue("The expected post did not appear", txtActual.getText().contains("Kerem"));
+        Assert.assertTrue("The expected post did not appear", textActual.getText().contains("Kerem"));
 
         waitAndClose();
     }
