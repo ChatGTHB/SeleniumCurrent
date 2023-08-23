@@ -17,7 +17,6 @@ public class _02_ActionHoverOverQuestion extends BaseDriver {
     //    Jewellery -> Necklaces -> Bib Necklaces click
     //    Verify that the URL includes the word bib-necklaces after the click.
 
-
     @Test
     public void Test() {
 
