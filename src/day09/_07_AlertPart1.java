@@ -15,8 +15,8 @@ public class _07_AlertPart1 extends BaseDriver {
         driver.get("http://demo.seleniumeasy.com/javascript-alert-box-demo.html");
         MyFunction.wait(3);
 
-        WebElement clickMe = driver.findElement(By.cssSelector("button[onclick='myAlertFunction()']"));
-        clickMe.click();
+        WebElement clickMe1 = driver.findElement(By.cssSelector("button[onclick='myAlertFunction()']"));
+        clickMe1.click();
 
         MyFunction.wait(2);
 
