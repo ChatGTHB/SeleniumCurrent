@@ -12,7 +12,7 @@ import utility.MyFunction;
 public class _08_ActionHoverTest extends BaseDriver {
 
     @Test
-    public void Test1() {
+    public void Test() {
 
         driver.get("https://www.hepsiburada.com/");
 
