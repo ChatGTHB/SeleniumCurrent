@@ -22,7 +22,7 @@ public class _07_AlertPart1 extends BaseDriver {
 
         // alert opened.
         driver.switchTo().alert().accept();
-        // Go to the alert box and press OK. so it closes.
+        // Go to the alert box and press OK. So it closes.
 
         waitAndClose();
     }
