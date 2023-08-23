@@ -1,0 +1,16 @@
+Interview question
+
+- How do you control and handle alerts?
+
+driver.switchTo().alert() -> switch to alert
+
+commands:
+1- accept  : OK allows us to press the OK button
+2- dismiss : CANCEL, NO, so we would answer in the negative.
+3- sendKeys: send a letter
+4- getText : get the text of the alert
+
+ driver.switchTo().alert().accept()
+ driver.switchTo().alert().dismiss()
+ driver.switchTo().alert().sendKeys()
+ driver.switchTo().alert().getText();
