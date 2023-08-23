@@ -6,7 +6,6 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
 import utility.BaseDriver;
 import utility.MyFunction;
-
 public class _07_AlertPart1 extends BaseDriver {
 
     @Test
