@@ -39,5 +39,4 @@ public class _05_ArrowKeysSelection extends BaseDriver {
 
         waitAndClose();
     }
-
 }
