@@ -12,7 +12,7 @@ import utility.MyFunction;
 public class _01_DragAndDropBy extends BaseDriver {
 
     @Test
-    public void Test1() {
+    public void Test() {
 
         // dragAndDropBy: Scrolls the WebElement vertically or horizontally.
         driver.get("http://talkerscode.com/webtricks/demo/demo_price-range-slider-using-jquery-css-and-php.php");
