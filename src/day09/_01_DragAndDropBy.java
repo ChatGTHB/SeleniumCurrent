@@ -21,18 +21,19 @@ public class _01_DragAndDropBy extends BaseDriver {
         WebElement leftSlider = driver.findElement(By.xpath("//div[@id='slider-range']/span[1]"));
         MyFunction.wait(2);
         // dragAndDropBy(WebElement,X , Y) x: in the horizontal direction, y: in the vertical direction
+
         Action action = actions.dragAndDropBy(leftSlider, 100, 0).build();// moved 100 units in the horizontal direction
         action.perform();                                                               // 0 : no possibility to move vertically
         // + It moves to the right when we enter a value, - to the left when we enter a value
         //actions.dragAndDropBy(leftSlider, 100, 0).build().perform();
 
         // TODO : Move the left slider to 200, the right slider to 400.
-
         WebElement rightSlider = driver.findElement(By.xpath("//div[@id='slider-range']/span[2]"));
         actions.dragAndDropBy(rightSlider, 101, 0).build().perform();
+        // TODO ---> Done
 
-        int width = leftSlider.getSize().width;
-        System.out.println("width = " + width);
+//        int width = leftSlider.getSize().width;
+//        System.out.println("width = " + width);
 
         waitAndClose();
     }
