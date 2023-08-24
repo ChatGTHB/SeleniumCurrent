@@ -16,7 +16,7 @@ public class BaseDriver {
     static {  // The condition of this is that it is extends and takes place in the first place.
 
         Logger logger = Logger.getLogger(""); // Get output logs.
-        logger.setLevel(Level.SEVERE);             // Show only ERRORs
+        logger.setLevel(Level.SEVERE);              // Show only ERRORs
 
         driver = new ChromeDriver();
         driver.manage().window().maximize(); // It maximizes the screen.
