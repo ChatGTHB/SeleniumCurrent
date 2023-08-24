@@ -1,0 +1,69 @@
+1- If the element is not in HTML
+2- Whether the element exists in HTML but is not visible
+3- Element exists in HTML and is visible but not clickable
+
+Thread.Sleep -> Not Selenium specific;
+                It waits for the given time anywhere in the java software.
+
+Selenium's hold commands:
+
+1- pageLoadTimeout : Page specific)
+
+driver.manage().timeouts().pageLoadTimeout( Duration.ofSeconds(20) );
+- If the page does not load within 20 seconds; gives error, reports.
+- If this is not used it will try to load the page forever.
+- It does not use the remaining time when the transaction occurs.
+
+
+2- ImplicitlyWait (For Public WebElements)
+
+driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(20)) :
+- Deadline for trying to find Web Elements with findElement/s.
+- Valid for all elements, written once.
+- Time to try to find the locator in the DOM.
+- It does not use the remaining time when the transaction occurs.
+
+
+3- ExplicitWait (Custom WebElement)
+
+The time given for the WebElement to meet the given criteria.
+- Wait until clickable,
+- Wait until it's in the DOM,
+- Wait until it's visible...
+- This cooldown is element specific.
+
+===================*************************************************==================
+
+1- Elementin HTML'de olmaması durumu
+2- Elementin HTML'de var olup, görünür olmaması durumu
+3- Elementin HTML'de var ve görünür olup, tıklanabilir olmaması
+
+Thread.Sleep -> Selenium'a özel değil;
+                javaya ait yazılımın herhangi bir yerinde verilen süre kadar bekler.
+
+Selenium'un bekletme komutları :
+
+1- pageLoadTimeout : Sayfaya özel)
+
+driver.manage().timeouts().pageLoadTimeout( Duration.ofSeconds(20) );
+- 20 sn içerisinde sayfa yüklenmezse; hata verir, bildirir.
+- Bu kullanılmazsa sayfayı sonsuza kadar yüklemeye çalışır.
+- İşlem gerçekleştiğinde kalan süreyi kullanmaz.
+
+
+2- ImplicitlyWait (Genel WebElementler için)
+
+driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(20))  :
+- Web Elementlerin findElement/s ile bulunmaya çalışılması için verilen mühlet.
+- Tüm elementler için geçerlidir, bir kez yazılır.
+- Locatorı DOM'da bulmaya çalışma süresi.
+- İşlem gerçekleştiğinde kalan süreyi kullanmaz.
+
+
+3- ExplicitWait (Özel WebElement)
+
+WebElementin verilen kritere uygun hale gelmesi için verilen mühlet.
+- Tıklanabilir olana kadar bekle,
+- DOM'da olana kadar bekle,
+- Görünür olana kadar bekle...
+- Bu bekleme elemente özeldir.
