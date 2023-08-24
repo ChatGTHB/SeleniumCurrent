@@ -30,7 +30,6 @@ public class _06_Question extends BaseDriver {
     public void Test(){
 
         driver.get("https://www.demoblaze.com/index.html");
-        MyFunction.wait(2);
 
         WebElement link=driver.findElement(By.linkText("Samsung galaxy s6"));
         link.click();
