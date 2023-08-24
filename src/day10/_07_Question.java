@@ -37,13 +37,11 @@ public class _07_Question extends BaseDriver {
         if (!cookiesAccept.isEmpty()) //
             cookiesAccept.get(0).click();
 
-        MyFunction.wait(2);
+        WebElement searchBox = driver.findElement(By.name("q"));
+        searchBox.sendKeys("selenium" + Keys.ENTER);
 
-        WebElement srcBox = driver.findElement(By.name("q"));
-        srcBox.sendKeys("selenium" + Keys.ENTER);
-
-//        WebElement srcBtn=driver.findElement(By.name("btnK"));
-//        srcBtn.click();  // Instead of these 2 lines, the ENTER key was sent above.
+//        WebElement searchButton=driver.findElement(By.name("btnK"));
+//        searchButton.click();  // Instead of these 2 lines, the ENTER key was sent above.
 
         wait.until(ExpectedConditions.elementToBeClickable(By.xpath("(//a/h3)[1]")));
         WebElement link1 = driver.findElement(By.xpath("(//a/h3)[1]"));
