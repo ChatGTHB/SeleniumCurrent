@@ -55,7 +55,7 @@ public class _03_ExplicitWait extends BaseDriver {
      Explicit: Tek bir elemana özel kriter olarak tanımlanır ve sadece ilgili elemanda geçerli olur.
 
      Her ikisi de tanımlı ise hangisinin süresi kullanılır ?
-     Önce Implicit kullanılır, ve üzerine Explicit'in süresi eklenerek
+     Önce Implicit kullanılır ve üzerine Explicit'in süresi eklenerek
      toplam hata sınırı süresi (mühlet sınırı) ortaya çıkmış olur.
 
      */
