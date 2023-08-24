@@ -7,7 +7,7 @@ Thread.Sleep -> Not Selenium specific;
 
 Selenium's hold commands:
 
-1- pageLoadTimeout : Page specific)
+1- pageLoadTimeout (Page specific)
 
 driver.manage().timeouts().pageLoadTimeout( Duration.ofSeconds(20) );
 - If the page does not load within 20 seconds; gives error, reports.
