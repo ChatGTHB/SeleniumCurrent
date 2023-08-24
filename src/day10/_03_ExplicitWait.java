@@ -37,17 +37,6 @@ public class _03_ExplicitWait extends BaseDriver {
     }
 
     /**
-     Mülakat Sorusu : Implicit ve Explicit
-
-     Implicit: Bütün elemanlar için geçerli olup; bir kere tanımlanır. (HTML de verilen locator var mı?)
-     Explicit: Tek bir elemana özel kriter olarak tanımlanır ve sadece ilgili elemanda geçerli olur.
-
-     Her ikisi de tanımlı ise hangisinin süresi kullanılır ?
-     önce Implicit kullanılır, ve üzerine Explicit'in süresi eklenerek
-     toplam hata sınırı süresi (mühlet sınırı) ortaya çıkmış olur.
-
-
-     ===================****************************************======================================
 
      Interview Question: Implicit and Explicit
 
@@ -57,5 +46,17 @@ public class _03_ExplicitWait extends BaseDriver {
      If both are defined, whose duration is used?
      Implicit is used first, with the duration of Explicit added to it
      the total error limit time (delay limit) will appear.
+
+     ===================****************************************======================================
+
+     Mülakat Sorusu : Implicit ve Explicit
+
+     Implicit: Bütün elemanlar için geçerli olup; bir kere tanımlanır. (HTML de verilen locator var mı?)
+     Explicit: Tek bir elemana özel kriter olarak tanımlanır ve sadece ilgili elemanda geçerli olur.
+
+     Her ikisi de tanımlı ise hangisinin süresi kullanılır ?
+     Önce Implicit kullanılır, ve üzerine Explicit'in süresi eklenerek
+     toplam hata sınırı süresi (mühlet sınırı) ortaya çıkmış olur.
+
      */
 }
