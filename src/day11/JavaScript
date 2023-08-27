@@ -1,0 +1,53 @@
+[EN]
+
+Codes run from within HTML are called JavaScript.
+
+In order to run these codes in Selenium. The following casting is done via the driver.
+JavascriptExecutor js= (JavascriptExecutor) driver;
+
+Then JavaScript codes are run with the following function.
+js.executeScript("window.scrollBy(0,3000);");
+
+scroll
+window.scrollTo(0, 3000); -> scrolls the page up to the given pixel
+window.scrollBy(0, 3000); -> scrolls from where it is
+window.scrollTo(0, document.body.scrollHeight); -> scrolls to the end of the page
+("arguments[0].scrollIntoView(true);", element) -> scrolls to the element.
+                               true : until the element appears at the top of the page,
+                               false: until the element appears at the bottom of the page
+                               default true;
+
+
+element.click -> normal click
+action.click -> action click
+
+javascript click
+("arguments[0].click();", element) -> javascript click() -> javascript click.
+
+=============================*********************==============================================
+
+[TR]
+
+HTML nin içinden çalıştırılan kodlara JavaScript denir.
+
+Selenium da bu kodları çalıştırabilmek için. driver üzerinden aşağıdaki casting yapılır.
+JavascriptExecutor js= (JavascriptExecutor) driver;
+
+Daha sonra aşağdaki fonksyon ile JavaScript kodları çalıştırılır.
+js.executeScript("window.scrollBy(0,3000);");
+
+scroll
+window.scrollTo(0, 3000);     -> verilen pixele kadar sayfayı kaydırır
+window.scrollBy(0, 3000);     -> bulunduğu yerden itibaren kaydırır
+window.scrollTo(0, document.body.scrollHeight);  -> sayfanın sonuna kadar kaydırır
+("arguments[0].scrollIntoView(true);", element)  -> elemente e kadar kaydırır.
+                              true : element sayfanın üstünde gözükene kadar,
+                              false: element sayfanın altına gözükene kadar
+                              default true;
+
+
+element.click  -> normal click
+action.click   -> action click
+
+javascript click
+("arguments[0].click();", element)   -> javascript click()  -> javascript click.
