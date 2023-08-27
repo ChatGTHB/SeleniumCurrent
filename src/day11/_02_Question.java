@@ -37,10 +37,12 @@ public class _02_Question extends BaseDriver {
         driver.switchTo().defaultContent(); // go directly to homepage
         driver.switchTo().frame(1);   // I switched to the second frame.
 
-        WebElement animalsSelect = driver.findElement(By.id("animalsSelect"));
+        WebElement animalsSelect = driver.findElement(By.id("animals"));
 
         Select objectSelect = new Select(animalsSelect);
-        objectSelect.selectByVisibleText("Avatar");
+//        objectSelect.selectByVisibleText("Avatar");
+//        objectSelect.selectByValue("avatar");
+        objectSelect.selectByIndex(3);
 
         waitAndClose();
     }
