@@ -42,7 +42,7 @@ public class _03_RobotIntro extends BaseDriver {
 
         MyFunction.wait(2);
         // Selenium windows handle switchTo
-        // Yeni açılan sekmeye geç.
+        // Switch to the newly opened tab.
         Set<String> windowsIDS = driver.getWindowHandles();
         Iterator indicator = windowsIDS.iterator();
         String firstTab = indicator.next().toString();
