@@ -42,7 +42,9 @@ public class _02_WindowsQuestion extends BaseDriver {
 
         // I clicked on the links that will open a page in a new tab
         for (WebElement link : links) {
-            js.executeScript("arguments[0].click();", link);
+            if (!link.getAttribute("href").contains("mail")) {
+                js.executeScript("arguments[0].click();", link);
+            }
         }
 
         // I got the IDs of the windows in all the new tabs that were opened.
