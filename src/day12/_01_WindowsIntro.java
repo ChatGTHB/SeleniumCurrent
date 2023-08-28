@@ -31,8 +31,9 @@ public class _01_WindowsIntro extends BaseDriver {
         }
 
         Set<String> windowsIds = driver.getWindowHandles();
-        for (String id : windowsIds)
+        for (String id : windowsIds) {
             System.out.println("id = " + id);
+        }
 
         MyFunction.wait(2);
         driver.switchTo().window(mainPageWindowId); // Switch to the corresponding Window (Tab)
