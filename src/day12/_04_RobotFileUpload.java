@@ -29,7 +29,7 @@ public class _04_RobotFileUpload extends BaseDriver {
         List<WebElement> acceptAll =
                 wait.until(ExpectedConditions.visibilityOfAllElementsLocatedBy(By.xpath("//span[text()='Accept All']")));
 
-        if (acceptAll.size() > 0) {
+        if (!acceptAll.isEmpty()) {
             acceptAll.get(0).click();
         }
 
@@ -47,7 +47,7 @@ public class _04_RobotFileUpload extends BaseDriver {
         robot.keyRelease(KeyEvent.VK_ENTER);
 
         // Method to copy string to memory
-        StringSelection dosyaYolu = new StringSelection("C:\\Users\\TechnoStudy\\Desktop\\dosya.txt");
+        StringSelection dosyaYolu = new StringSelection("C:\\Users\\cihat\\Desktop\\Sundry\\dosyaYolu.txt");
         Toolkit.getDefaultToolkit().getSystemClipboard().setContents(dosyaYolu, null);
 
         MyFunction.wait(1);
@@ -91,6 +91,4 @@ public class _04_RobotFileUpload extends BaseDriver {
 
         waitAndClose();
     }
-
-
 }
