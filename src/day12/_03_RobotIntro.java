@@ -44,9 +44,9 @@ public class _03_RobotIntro extends BaseDriver {
         // Selenium windows handle switchTo
         // Switch to the newly opened tab.
         Set<String> windowsIDS = driver.getWindowHandles();
-        Iterator indicator = windowsIDS.iterator();
-        String firstTab = indicator.next().toString();
-        String secondTab = indicator.next().toString();
+        Iterator iterator = windowsIDS.iterator();
+        String firstTab = iterator.next().toString();
+        String secondTab = iterator.next().toString();
 //        System.out.println("firstTab = " + firstTab);
 //        System.out.println("secondTab = " + secondTab);
 
