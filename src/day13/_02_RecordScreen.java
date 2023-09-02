@@ -30,19 +30,19 @@ public class _02_RecordScreen extends BaseDriver {
 
         List<WebElement> errorMessage = driver.findElements(By.xpath("//*[text()='Invalid credentials']"));
 
-        if (errorMessage.size() > 0) { // If there is an error: I want to save a screenshot
+        if (!errorMessage.isEmpty()) { // If there is an error: I want to save a screenshot
 
-            System.out.println("hata oldu");
+            System.out.println("There was a mistake");
 
             // Record Screen
 
             TakesScreenshot ts = (TakesScreenshot) driver;           // Stage 1 --> I defined the screenshot variable
-            File hafidakiHali = ts.getScreenshotAs(OutputType.FILE); // Stage 2 --> Screenshot taken, in memory
+            File memoryState = ts.getScreenshotAs(OutputType.FILE);  // Stage 2 --> Screenshot taken, in memory
             // Save screenshot in file format: "get screenshot as file"
 
             // Stage 3 --> I need to save the screenshot in memory to physical file.
             // Save the screen recording in the memory, the path and the file I named
-            FileUtils.copyFile(hafidakiHali, new File("ekranGoruntuleri\\screenshot.png"));
+            FileUtils.copyFile(memoryState, new File("C:\\Users\\cihat\\Desktop\\Sundry\\Screenshots\\screenshot.png"));
 
             // TODO : Do something so that each screen recording is recorded SEPARATELY.
         }
