@@ -1,1 +1,1 @@
-# Current Selenium and Basic HTML Education
+# Current Selenium and Basic HTML Training
