@@ -48,6 +48,4 @@ public class _02_RecordScreen extends BaseDriver {
         }
         waitAndClose();
     }
-
-
 }
