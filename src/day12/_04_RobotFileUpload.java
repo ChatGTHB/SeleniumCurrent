@@ -23,8 +23,8 @@ public class _04_RobotFileUpload extends BaseDriver {
         MyFunction.wait(1);
 
         // acceptAll
-        WebElement acceptAllFrame = driver.findElement(By.id("gdpr-consent-notice"));
-        driver.switchTo().frame(acceptAllFrame);
+        WebElement iframe = driver.findElement(By.id("gdpr-consent-notice"));
+        driver.switchTo().frame(iframe);
 
         List<WebElement> acceptAll =
                 wait.until(ExpectedConditions.visibilityOfAllElementsLocatedBy(By.xpath("//span[text()='Accept All']")));
@@ -47,8 +47,8 @@ public class _04_RobotFileUpload extends BaseDriver {
         robot.keyRelease(KeyEvent.VK_ENTER);
 
         // Method to copy string to memory
-        StringSelection dosyaYolu = new StringSelection("C:\\Users\\cihat\\Desktop\\Sundry\\dosyaYolu.txt");
-        Toolkit.getDefaultToolkit().getSystemClipboard().setContents(dosyaYolu, null);
+        StringSelection filePath = new StringSelection("C:\\Users\\cihat\\Desktop\\Sundry\\filePath.txt");
+        Toolkit.getDefaultToolkit().getSystemClipboard().setContents(filePath, null);
 
         MyFunction.wait(1);
         robot.keyPress(KeyEvent.VK_CONTROL); // These two keys are currently pressed, pasted in memory
