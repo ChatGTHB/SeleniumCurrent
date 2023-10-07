@@ -8,7 +8,7 @@ import org.openqa.selenium.WebElement;
 import utility.BaseDriver;
 import utility.MyFunction;
 
-public class _01_ShadowContent extends BaseDriver {
+public class _01_A_ShadowContent extends BaseDriver {
 
     @Test
     public void Test() {
