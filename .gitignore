@@ -3,6 +3,8 @@ out/
 !**/src/main/**/out/
 !**/src/test/**/out/
 .gitignore
+*.iml
+.idea
 
 ### Eclipse ###
 .apt_generated
