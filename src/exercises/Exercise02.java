@@ -22,6 +22,7 @@ public class Exercise02 extends BaseDriver {
           7- Click CheckOut
           8- Fill in the user information and click Continue
           9- Here, test with Assert whether the sum of the costs of each item is equal to the Item total below.
+         10- Put MyFunction.wait(); between each click vs action
 
           XPATH will be used entirely in this question.
      */
