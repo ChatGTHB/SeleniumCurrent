@@ -20,7 +20,7 @@ public class _04_Homework extends BaseDriver {
 
 
     @Test
-    public void FormTest() {
+    public void formTest() {
 
         driver.get("https://formsmarts.com/form/yu?mode=h5");
 
