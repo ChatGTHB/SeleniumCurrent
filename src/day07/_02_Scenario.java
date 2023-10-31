@@ -25,7 +25,7 @@ public class _02_Scenario extends BaseDriver {
 //     XPATH will be used entirely in this question.
 
     @Test
-    public void Cart_Test1() {
+    public void cartTest01() {
 
         driver.get("https://www.saucedemo.com/");
 
