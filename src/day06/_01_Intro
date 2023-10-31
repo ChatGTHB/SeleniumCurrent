@@ -72,4 +72,4 @@ id sinden u geçen
 
 [id^='u']  -> ^ bununla başlayan
 [id$='u']  -> $ bununla biten
-[id*='u']  -> * içide bu geçen
+[id*='u']  -> * içiNde bu geçen
