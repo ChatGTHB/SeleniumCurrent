@@ -1,5 +1,4 @@
-package day10;
-
+package exercises;
 
 import org.junit.Assert;
 import org.junit.Test;
@@ -8,7 +7,7 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import utility.BaseDriver;
 
-public class _05_Question extends BaseDriver {
+public class Exercise04 extends BaseDriver {
 
     /**
      * Go to this site. http://demo.seleniumeasy.com/ajax-form-submit-demo.html
@@ -52,15 +51,3 @@ public class _05_Question extends BaseDriver {
         waitAndClose();
     }
 }
-
-
-
-
-
-
-
-
-
-
-
-
