@@ -51,7 +51,7 @@ public class _07_Question extends BaseDriver {
 
         wait.until(ExpectedConditions.urlToBe("https://www.selenium.dev/"));
 
-        Assert.assertTrue("URL could not be verified", driver.getCurrentUrl().equals("https://www.selenium.dev/"));
+        Assert.assertEquals("URL could not be verified", "https://www.selenium.dev/", driver.getCurrentUrl());
 
         waitAndClose();
 
