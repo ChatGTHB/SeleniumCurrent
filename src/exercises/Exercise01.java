@@ -4,7 +4,6 @@ import org.junit.Test;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
 import utility.BaseDriver;
-import utility.MyFunction;
 
 public class Exercise01 extends BaseDriver {
 
@@ -24,35 +23,27 @@ public class Exercise01 extends BaseDriver {
 
         driver.get("https://formsmarts.com/form/yu?mode=h5");
 
-        MyFunction.wait(2);
         WebElement business = driver.findElement(By.cssSelector("[type='radio'][value='Business']"));
         business.click();
 
-        MyFunction.wait(2);
         WebElement dropDownDiscover = driver.findElement(By.cssSelector("select[id$='_4588']"));
         dropDownDiscover.click();
 
-        MyFunction.wait(2);
         WebElement optionOnlineAdvertising = driver.findElement(By.cssSelector("option[value='Online Advertising']"));
         optionOnlineAdvertising.click();
 
-        MyFunction.wait(2);
         WebElement everyDayRadio = driver.findElement(By.cssSelector("[type='radio'][value='Every Day']"));
         everyDayRadio.click();
 
-        MyFunction.wait(2);
         WebElement goodRadio = driver.findElement(By.cssSelector("[type='radio'][value='Good']"));
         goodRadio.click();
 
-        MyFunction.wait(2);
         WebElement dropdownHowLong = driver.findElement(By.cssSelector("select[id$='_4597']"));
         dropdownHowLong.click();
 
-        MyFunction.wait(2);
         WebElement option3 = driver.findElement(By.cssSelector("select[id$='_4597']> :nth-child(3)"));
         option3.click();
 
-        MyFunction.wait(2);
         goodRadio.click();
 
         waitAndClose();
