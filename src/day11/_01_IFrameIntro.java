@@ -31,7 +31,7 @@ public class _01_IFrameIntro extends BaseDriver {
 
         // If a locator in an iframe will be processed, I need to switch to that iframe first.
         // driver.switchTo().frame(0);      // switch to relevant room (iframe)
-        // driver.switchTo().parentFrame(); // go to the previous page, one back
+        // driver.switchTo().parentFrame(); // goes to the previous page, one back
         driver.switchTo().defaultContent(); // goes directly to the outermost page
 
         waitAndClose();
