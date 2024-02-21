@@ -7,18 +7,24 @@ import org.openqa.selenium.chrome.ChromeDriver;
 import utility.MyFunction;
 
 public class _01_FindingById {
+
     public static void main(String[] args) {
+
+        /**
+
+         Scenario:
+         1-  Open the page --> https://form.jotform.com/221934510376353
+
+         2-  Find the first textbox (id=first_8), give it a name eg nameBox
+         3-  Send the text "Kerem" in the nameBox
+
+         4-  Find the second textbox, give it a name eg lastNameBox
+         5-  Send the text "Said" in the lastNameBox
+         */
+
 
         WebDriver driver = new ChromeDriver();
         driver.get("https://form.jotform.com/221934510376353"); // I went to the page
-
-/**
- 1-  Find the first textbox (id=first_8), give it a name eg nameBox
- 2-  Send the text "Kerem" in the NameBox
-
- 3-  Find the second textbox, give it a name eg lastnameBox
- 4-  lastnameBox send text "Said"
- */
 
         WebElement nameBox = driver.findElement(By.id("first_8")); // find element by id
         nameBox.sendKeys("Kerem"); // send text to boxes
