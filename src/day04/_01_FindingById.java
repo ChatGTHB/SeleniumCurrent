@@ -6,8 +6,9 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
 import utility.MyFunction;
 
-public class _02_FindingById {
+public class _01_FindingById {
     public static void main(String[] args) {
+
         WebDriver driver = new ChromeDriver();
         driver.get("https://form.jotform.com/221934510376353"); // I went to the page
 
