@@ -21,7 +21,7 @@ public class BaseDriver {
         driver = new ChromeDriver();
         driver.manage().window().maximize(); // It maximizes the screen.
         driver.manage().timeouts().pageLoadTimeout(Duration.ofSeconds(30)); // 30 sec delay: time to load the page
-        driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(30));  // 30 sec delay: time to find the element
+        driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(30));  // 30 sec delay: time to find the elements
         wait = new WebDriverWait(driver, Duration.ofSeconds(20));
     }
 
