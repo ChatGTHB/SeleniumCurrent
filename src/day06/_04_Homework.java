@@ -9,15 +9,16 @@ import utility.MyFunction;
 
 public class _04_Homework extends BaseDriver {
 
-    // 1- Open https://formsmarts.com/form/yu?mode=h5
-    // 2- Checked the Business.
-    // 3- Click on discover XYZ and select Online Advertising
-    // 4- Choose every day
-    // 5- Choose good
-    // 6- Click using XYZ and choose option 3
-    // Css selector
-    // Put MyFunction.wait(2); between each click vs action
-
+    /**
+     * 1- Open https://formsmarts.com/form/yu?mode=h5
+     * 2- Checked the Business.
+     * 3- Click on discover XYZ and select Online Advertising
+     * 4- Choose every day
+     * 5- Choose good
+     * 6- Click using XYZ and choose option 3
+     * Css selector
+     * Put MyFunction.wait(2); between each click vs action
+     */
 
     @Test
     public void formTest() {
