@@ -17,7 +17,8 @@ public class _03_Question extends BaseDriver {
     public void test() {
 
         /**
-          Test Scenario
+         Test Scenario
+
          1- Go to https://www.facebook.com/
          2- Click CreateNewAccount.
          3- In the new window that opens, enter your name, surname and email.
@@ -54,14 +55,16 @@ public class _03_Question extends BaseDriver {
 
         MyFunction.wait(1);
         WebElement reEmail = driver.findElement(By.name("reg_email_confirmation__"));
-        Assert.assertFalse("ReEmail appeared = ", reEmail.isDisplayed());
+        Assert.assertFalse("ReEmail appeared = ", reEmail.isDisplayed()); // I'm waiting for it not to appear
+        System.out.println("reEmail.isDisplayed() = " + reEmail.isDisplayed());
 
         MyFunction.wait(1);
         WebElement email = driver.findElement(By.name("reg_email__"));
         email.sendKeys("keremsaidr@gxmail.com");
 
         MyFunction.wait(1);
-        Assert.assertTrue("ReEmail did not appear = ", reEmail.isDisplayed());
+        Assert.assertTrue("ReEmail did not appear = ", reEmail.isDisplayed()); // I'm waiting for it to appear
+        System.out.println("reEmail.isDisplayed() = " + reEmail.isDisplayed());
 
         WebElement webDay = driver.findElement(By.id("day"));
         WebElement webMonth = driver.findElement(By.id("month"));
