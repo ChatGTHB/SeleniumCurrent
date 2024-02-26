@@ -35,8 +35,8 @@ CSS Alt elemanlardan                     XPath
 
 >       -> cocuklar                      /
 space   -> tüm çocuklar                  //
-+       -> bitişik kardeş                following-sibling::
-~       -> tüm kardeşler                 following::
++       -> bitişik kardeş                /following-sibling::
+~       -> tüm kardeşler                 //following::
 
 
 CSS nth-child                             XPath
@@ -52,14 +52,3 @@ XPath'in CSS'Ten üstünlükleri :
 2- Geri Geri Gitme                 ->     /..         -> parenti bulur
 
 3- Çoklu Elemanlardan Seçme               (//*[@id='user-message'])[2]
-
-
-
-
-
-
-
-
-
-
-
