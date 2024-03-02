@@ -14,7 +14,7 @@ import java.util.List;
 public class _03_ActionDoubleClickTest extends BaseDriver {
 
     @Test
-    public void Test() {
+    public void test() {
 
         driver.get("https://demoqa.com/buttons");
 

@@ -14,7 +14,7 @@ import java.util.List;
 public class _04_ActionRightClickTest extends BaseDriver {
 
     @Test
-    public void Test1() {
+    public void test() {
 
         driver.get("https://demoqa.com/buttons");
 

@@ -9,9 +9,9 @@ import org.openqa.selenium.interactions.Actions;
 import utility.BaseDriver;
 import utility.MyFunction;
 
-public class _03_ActionMouseWheel extends BaseDriver {
+public class _08_ActionMouseWheel extends BaseDriver {
     @Test
-    public void MouseWheelTest1() {
+    public void mouseWheelTest1() {
 
         // scroll to element
         driver.get("https://www.selenium.dev/selenium/web/scrolling_tests/frame_with_nested_scrolling_frame_out_of_view.html");
