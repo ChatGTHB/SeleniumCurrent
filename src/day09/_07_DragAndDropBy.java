@@ -9,15 +9,22 @@ import org.openqa.selenium.interactions.Actions;
 import utility.BaseDriver;
 import utility.MyFunction;
 
+import java.util.List;
+
 public class _07_DragAndDropBy extends BaseDriver {
 
     @Test
     public void test() {
 
+        Actions actions = new Actions(driver);
+
         // dragAndDropBy: Scrolls the WebElement vertically or horizontally.
         driver.get("http://talkerscode.com/webtricks/demo/demo_price-range-slider-using-jquery-css-and-php.php");
 
-        Actions actions = new Actions(driver);
+        List<WebElement> consent = driver.findElements(By.xpath("//button[@class='fc-button fc-cta-consent fc-primary-button']//p"));
+        if (!consent.isEmpty()) {
+            consent.get(0).click();
+        }
 
         WebElement leftSlider = driver.findElement(By.xpath("//div[@id='slider-range']/span[1]"));
         MyFunction.wait(2);
@@ -29,12 +36,14 @@ public class _07_DragAndDropBy extends BaseDriver {
         //  actions.dragAndDropBy(leftSlider, 100, 0).build().perform();
 
         // TODO : Move the left slider to 200, the right slider to 400.
+
+        WebElement sliderRange = driver.findElement(By.xpath("//*[@id='slider-range']"));
+        int sliderRangeWidth = sliderRange.getSize().width;
+        System.out.println("sliderRangeWidth = " + sliderRangeWidth);
+
         WebElement rightSlider = driver.findElement(By.xpath("//div[@id='slider-range']/span[2]"));
         actions.dragAndDropBy(rightSlider, 101, 0).build().perform();
         // TODO ---> Done
-
-        // int width = leftSlider.getSize().width;
-        // System.out.println("width = " + width);
 
         waitAndClose();
     }
