@@ -9,12 +9,19 @@ import org.openqa.selenium.interactions.Actions;
 import utility.BaseDriver;
 import utility.MyFunction;
 
-public class _05_ActionClickTest extends BaseDriver {
+import java.util.List;
+
+public class _02_ActionClickTest extends BaseDriver {
 
     @Test
-    public void Test() {
+    public void test() {
 
         driver.get("https://demoqa.com/buttons");
+
+        List<WebElement> consent = driver.findElements(By.xpath("//button[@class='fc-button fc-cta-consent fc-primary-button']//p"));
+        if (!consent.isEmpty()) {
+            consent.get(0).click();
+        }
 
         WebElement clickButton = driver.findElement(By.xpath("//button[text()='Click Me']"));
 
@@ -28,8 +35,15 @@ public class _05_ActionClickTest extends BaseDriver {
         action.perform(); // The action is happening. process, apply.
         System.out.println("Action has taken place");
 
-        // short form --> actions.moveToElement(element).click().build().perform();
+        // short form
+        // actions.moveToElement(clickButton).click().build().perform();  // for a lot of action
 
-        waitAndClose();
+        // even shorter version
+        //new Actions(driver).moveToElement(clickButton).click().build().perform(); // for a single action
+
+        // the shortest version
+        //new Actions(driver).click(clickButton).build().perform(); // for a single action
+
+         waitAndClose();
     }
 }
