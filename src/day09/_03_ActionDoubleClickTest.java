@@ -9,12 +9,19 @@ import org.openqa.selenium.interactions.Actions;
 import utility.BaseDriver;
 import utility.MyFunction;
 
-public class _06_ActionDoubleClickTest extends BaseDriver {
+import java.util.List;
+
+public class _03_ActionDoubleClickTest extends BaseDriver {
 
     @Test
     public void Test() {
 
         driver.get("https://demoqa.com/buttons");
+
+        List<WebElement> consent = driver.findElements(By.xpath("//button[@class='fc-button fc-cta-consent fc-primary-button']//p"));
+        if (!consent.isEmpty()) {
+            consent.get(0).click();
+        }
 
         WebElement doubleClickButton = driver.findElement(By.id("doubleClickBtn"));
         MyFunction.wait(2);
@@ -25,6 +32,8 @@ public class _06_ActionDoubleClickTest extends BaseDriver {
 
         waitAndClose();
 
-        // short form --> actions.doubleClick(doubleClickButton).build().perform();
+        // short forms
+        // --> actions.doubleClick(doubleClickButton).build().perform();
+        // --> new Actions(driver).doubleClick(doubleClickButton).build().perform();
     }
 }
