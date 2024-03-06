@@ -8,7 +8,7 @@ import org.openqa.selenium.WebElement;
 import utility.BaseDriver;
 import utility.MyFunction;
 
-public class _09_AlertPart3 extends BaseDriver {
+public class _03_AlertPart03 extends BaseDriver {
 
     @Test
     public void Test() {

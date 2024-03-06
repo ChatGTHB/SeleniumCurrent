@@ -7,9 +7,7 @@ import org.openqa.selenium.WebElement;
 import utility.BaseDriver;
 import utility.MyFunction;
 
-import java.time.Duration;
-
-public class _02_WaitsEntry extends BaseDriver {
+public class _05_WaitsIntro extends BaseDriver {
     // Thread.Sleep(), ImplicitlyWait
     @Test
     public void Test() throws InterruptedException {

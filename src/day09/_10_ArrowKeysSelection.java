@@ -11,7 +11,7 @@ import utility.MyFunction;
 
 import java.util.List;
 
-public class _10_ActionKeyKontrolSendKeys extends BaseDriver {
+public class _10_ArrowKeysSelection extends BaseDriver {
 
     @Test
     public void test() {
