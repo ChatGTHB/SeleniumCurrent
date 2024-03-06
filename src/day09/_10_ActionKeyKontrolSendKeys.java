@@ -11,7 +11,7 @@ import utility.MyFunction;
 
 import java.util.List;
 
-public class _10_ActionTusKontrolSendKeys extends BaseDriver {
+public class _10_ActionKeyKontrolSendKeys extends BaseDriver {
 
     @Test
     public void test() {
@@ -29,11 +29,21 @@ public class _10_ActionTusKontrolSendKeys extends BaseDriver {
         // textBox a git, içine tıklat, b hrfine bas, aşağı yön tuşuna bas, enter a bas.
         Actions actions = new Actions(driver);
 
-        actions.moveToElement(textBox).click().sendKeys("b").build().perform();
+        actions
+                .moveToElement(textBox)
+                .click()
+                .sendKeys("b")
+                .build()
+                .perform();
 
-        MyFunction.wait(2); //tuşa basıldığında seçeneklerin çıkması için bir süre gerekiyor
+        // Tuşa basıldığında seçeneklerin çıkması için bir süre gerekiyor
+        MyFunction.wait(2);
 
-        actions.sendKeys(Keys.DOWN).sendKeys(Keys.ENTER).build().perform();
+        actions
+                .sendKeys(Keys.DOWN)
+                .sendKeys(Keys.ENTER)
+                .build()
+                .perform();
 
         waitAndClose();
     }
