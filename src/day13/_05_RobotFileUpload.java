@@ -29,14 +29,14 @@ public class _05_RobotFileUpload extends BaseDriver {
             driver.switchTo().frame(acceptAllFrame.get(0));
 
             List<WebElement> acceptAll =
-                    wait.until(ExpectedConditions.visibilityOfAllElementsLocatedBy(By.xpath("//span[text()='Accept All']")));
+                    wait.until(ExpectedConditions.visibilityOfAllElementsLocatedBy
+                            (By.xpath("//span[text()='Accept All']")));
 
             if (!acceptAll.isEmpty())
                 acceptAll.get(0).click();
         }
 
-        /*********************/
-
+        /**************************************************************************/
 
         Robot robot = new Robot();
 
@@ -49,19 +49,23 @@ public class _05_RobotFileUpload extends BaseDriver {
         robot.keyRelease(KeyEvent.VK_ENTER);
 
         // Method to copy string to memory
-        StringSelection filePath = new StringSelection("C:\\Users\\cihat\\Desktop\\Sundry\\filePath.txt");
+        StringSelection filePath = new StringSelection
+                ("C:\\Users\\cihat\\Desktop\\Sundry\\filePath.txt");
         Toolkit.getDefaultToolkit().getSystemClipboard().setContents(filePath, null);
 
         MyFunction.wait(1);
-        robot.keyPress(KeyEvent.VK_CONTROL); // These two keys are currently pressed, pasted in memory
+        // These two keys are currently pressed, pasted in memory
+        robot.keyPress(KeyEvent.VK_CONTROL);
         robot.keyPress(KeyEvent.VK_V);
 
         MyFunction.wait(1);
-        robot.keyRelease(KeyEvent.VK_CONTROL); // Keys released
+        // Keys released
+        robot.keyRelease(KeyEvent.VK_CONTROL);
         robot.keyRelease(KeyEvent.VK_V);
 
         MyFunction.wait(1);
-        robot.keyPress(KeyEvent.VK_ENTER); // File sent by pressing Enter
+        // File sent by pressing Enter
+        robot.keyPress(KeyEvent.VK_ENTER);
         robot.keyRelease(KeyEvent.VK_ENTER);
 
         MyFunction.wait(1);
@@ -73,7 +77,8 @@ public class _05_RobotFileUpload extends BaseDriver {
 
         // I checked it by pressing space
         MyFunction.wait(1);
-        robot.keyPress(KeyEvent.VK_SPACE); // Checked
+        // Checked
+        robot.keyPress(KeyEvent.VK_SPACE);
         robot.keyRelease(KeyEvent.VK_SPACE);
 
         MyFunction.wait(1);
@@ -84,10 +89,12 @@ public class _05_RobotFileUpload extends BaseDriver {
         }
 
         MyFunction.wait(1);
+        // I pressed the Submit button
         robot.keyPress(KeyEvent.VK_ENTER);
         robot.keyRelease(KeyEvent.VK_ENTER);
 
-        WebElement message = wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//*[text()='has been successfully uploaded.']")));
+        WebElement message = wait.until(ExpectedConditions.visibilityOfElementLocated
+                (By.xpath("//*[text()='has been successfully uploaded.']")));
 
         Assert.assertTrue(message.isDisplayed());
 
