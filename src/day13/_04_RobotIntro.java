@@ -50,7 +50,6 @@ public class _04_RobotIntro extends BaseDriver {
 //        System.out.println("firstTab = " + firstTab);
 //        System.out.println("secondTab = " + secondTab);
 
-
         // Selenium driver.get
         // Tell the driver to open facebook
         MyFunction.wait(2);

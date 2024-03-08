@@ -17,7 +17,7 @@ import java.util.List;
 public class _02_RecordScreen extends BaseDriver {
 
     @Test
-    public void Test() throws IOException {
+    public void test() throws IOException {
 
         driver.get("https://opensource-demo.orangehrmlive.com/web/index.php/auth/login");
         MyFunction.wait(2);

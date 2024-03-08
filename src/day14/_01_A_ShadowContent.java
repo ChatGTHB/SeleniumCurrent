@@ -11,7 +11,7 @@ import utility.MyFunction;
 public class _01_A_ShadowContent extends BaseDriver {
 
     @Test
-    public void Test() {
+    public void test() {
 
         driver.get("https://www.akakce.com/");
         MyFunction.wait(2);

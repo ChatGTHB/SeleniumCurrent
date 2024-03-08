@@ -9,7 +9,7 @@ import utility.BaseDriver;
 public class _01_B_ShadowRoot extends BaseDriver {
 
     @Test
-    public void Test() {
+    public void test() {
 
         driver.get("https://itytest.ccngroup.com.tr/Era/LoginPage?ReturnUrl=%2FEra");
 

@@ -6,7 +6,6 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebElement;
 import utility.BaseDriver;
-import utility.MyFunction;
 
 import java.util.List;
 import java.util.Set;
@@ -29,7 +28,7 @@ public class _02_WindowsQuestion extends BaseDriver {
      */
 
     @Test
-    public void Test() {
+    public void test() {
 
         driver.get("https://www.selenium.dev/");
 

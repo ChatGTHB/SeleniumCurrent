@@ -9,7 +9,7 @@ import utility.MyFunction;
 public class _03_WindowSize extends BaseDriver {
 
     @Test
-    public void Test() {
+    public void test() {
 
         driver.get("https://www.youtube.com/");
         MyFunction.wait(5);

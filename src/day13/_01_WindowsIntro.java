@@ -31,7 +31,7 @@ public class _01_WindowsIntro extends BaseDriver {
             js.executeScript("arguments[0].click();", link);
         }
 
-        Set<String> windowsIDs = driver.getWindowHandles();
+        Set<String> windowsIDs = driver.getWindowHandles(); // Give the ID of all the slabs
         for (String id : windowsIDs) {
             System.out.println("id = " + id);
         }

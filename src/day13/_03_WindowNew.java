@@ -6,7 +6,7 @@ import org.openqa.selenium.WindowType;
 import utility.BaseDriver;
 import utility.MyFunction;
 
-public class _03_WindowsNew extends BaseDriver {
+public class _03_WindowNew extends BaseDriver {
 
     @Test
     public void test(){
