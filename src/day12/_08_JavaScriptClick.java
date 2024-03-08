@@ -18,12 +18,11 @@ public class _08_JavaScriptClick extends BaseDriver {
 
         JavascriptExecutor js=(JavascriptExecutor)driver;
 
-        WebElement viewAllResearch= driver.findElement(By.xpath("//*[@id=\"w-node-ad4eb106-c8d7-745c-de04-04c71a563382-1a56337f\"]/a"));
-        js.executeScript("arguments[0].scrollIntoView(false);", viewAllResearch);
-
+        WebElement readStory=driver.findElement(By.xpath("//div[text()='Read Success Story']"));
+        js.executeScript("arguments[0].scrollIntoView(false);", readStory);
         MyFunction.wait(2);
-        // viewAllResearch.click();  // Couldn't click from the top of the page because it was under the top menu
-        js.executeScript("arguments[0].click();", viewAllResearch); // We clicked it with _04_JavaScript code in HTML and it worked
+        //readStory.click();  // Couldn't click from the top of the page because it was under the top menu
+        js.executeScript("arguments[0].click();", readStory); // We clicked it with JavaScript code in HTML and it worked
 
         MyFunction.wait(2);
         waitAndClose();

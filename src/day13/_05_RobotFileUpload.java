@@ -14,23 +14,25 @@ import java.awt.datatransfer.StringSelection;
 import java.awt.event.KeyEvent;
 import java.util.List;
 
-public class _04_RobotFileUpload extends BaseDriver {
+public class _05_RobotFileUpload extends BaseDriver {
 
     @Test
-    public void Test() throws AWTException {
+    public void test() throws AWTException {
 
         driver.get("http://demo.guru99.com/test/upload/");
         MyFunction.wait(1);
 
         // acceptAll
-        WebElement iframe = driver.findElement(By.id("gdpr-consent-notice"));
-        driver.switchTo().frame(iframe);
+        List<WebElement> acceptAllFrame=driver.findElements(By.id("gdpr-consent-notice"));
+        if (!acceptAllFrame.isEmpty()) {
 
-        List<WebElement> acceptAll =
-                wait.until(ExpectedConditions.visibilityOfAllElementsLocatedBy(By.xpath("//span[text()='Accept All']")));
+            driver.switchTo().frame(acceptAllFrame.get(0));
 
-        if (!acceptAll.isEmpty()) {
-            acceptAll.get(0).click();
+            List<WebElement> acceptAll =
+                    wait.until(ExpectedConditions.visibilityOfAllElementsLocatedBy(By.xpath("//span[text()='Accept All']")));
+
+            if (!acceptAll.isEmpty())
+                acceptAll.get(0).click();
         }
 
         /*********************/

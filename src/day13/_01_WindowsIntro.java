@@ -14,12 +14,13 @@ import java.util.Set;
 public class _01_WindowsIntro extends BaseDriver {
 
     @Test
-    public void Test() {
+    public void test() {
+
+        // Each tab in the browser is called a window in Selenium
 
         driver.get("https://www.selenium.dev/");
 
         JavascriptExecutor js = (JavascriptExecutor) driver;
-        MyFunction.wait(2);
 
         String mainPageWindowId = driver.getWindowHandle(); // I got the id of my location i.e. home page
 
@@ -30,12 +31,11 @@ public class _01_WindowsIntro extends BaseDriver {
             js.executeScript("arguments[0].click();", link);
         }
 
-        Set<String> windowsIds = driver.getWindowHandles();
-        for (String id : windowsIds) {
+        Set<String> windowsIDs = driver.getWindowHandles();
+        for (String id : windowsIDs) {
             System.out.println("id = " + id);
         }
 
-        MyFunction.wait(2);
         driver.switchTo().window(mainPageWindowId); // Switch to the corresponding Window (Tab)
 
         waitAndClose();

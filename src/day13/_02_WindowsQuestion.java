@@ -60,7 +60,6 @@ public class _02_WindowsQuestion extends BaseDriver {
             driver.switchTo().window(id);
             driver.close();
         }
-
         waitAndClose();
     }
 }
