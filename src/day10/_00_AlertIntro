@@ -4,7 +4,8 @@ Interview question
 
 driver.switchTo().alert() -> switch to alert
 
-commands:
+Commands:
+
 1- accept  : OK allows us to press the OK button
 2- dismiss : CANCEL, NO, so we would answer in the negative.
 3- sendKeys: send a letter
