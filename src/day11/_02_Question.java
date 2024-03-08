@@ -1,52 +1,58 @@
 package day11;
 
 
+import org.junit.Assert;
 import org.junit.Test;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
-import org.openqa.selenium.support.ui.Select;
+import org.openqa.selenium.support.ui.ExpectedConditions;
 import utility.BaseDriver;
 
 public class _02_Question extends BaseDriver {
 
     /**
-     Scenario :
-     Go to https://chercher.tech/practice/frames,
-     Write Türkiye in the first box that appears on the screen.
-     Then select the avatar from the animals options.
-     */
-
-    /**
-     Senaryo :
-     https://chercher.tech/practice/frames sitesine gidiniz,
-     Ekranda gözüken ilk kutucuğa Türkiye yazınız.
-     Daha sonra animals seçeneklerinden avatarı seçiniz.
+     * Go to this site. http://demo.seleniumeasy.com/ajax-form-submit-demo.html
+     * Enter Name.
+     * Enter comments.
+     * Click on Submit.
+     * Form submitted Successfully! text should be displayed.
+     * Check with Assert
+     * (Do not use XPath)
+     *
+     *=========================*******************************=======================
+     *
+     * Bu siteye gidiniz.  http://demo.seleniumeasy.com/ajax-form-submit-demo.html
+     * Name giriniz.
+     * Comment giriniz.
+     * Submit'e tıklayınız.
+     * Form submited Successfully! yazısı görüntülenmelidir.
+     * Assert ile kontrol ediniz
+     * (XPath kullanmayınız)
      */
 
     @Test
-    public void Test() {
+    public void test() {
 
-        driver.get("https://chercher.tech/practice/frames");
+        driver.get("http://demo.seleniumeasy.com/ajax-form-submit-demo.html");
 
-        driver.switchTo().frame(0);   // Passed to the first frame.
+        WebElement title = driver.findElement(By.id("title"));
+        title.sendKeys("Kerem Said");
 
-        WebElement input = driver.findElement(By.cssSelector("#topic+input"));
-        input.sendKeys("Türkiye");
+        WebElement description = driver.findElement(By.id("description"));
+        description.sendKeys("My new product turned out quite well, thank you.");
 
-        // driver.switchTo().parentFrame(); // go back to parent
-        driver.switchTo().defaultContent(); // go directly to homepage
-        driver.switchTo().frame(1);   // I switched to the second frame.
+        WebElement submit = driver.findElement(By.id("btn-submit"));
+        submit.click();
 
-        WebElement animalsSelect = driver.findElement(By.id("animals"));
+        wait.until(ExpectedConditions.textToBe(By.id("submit-control"), "Form submited Successfully!"));
+        WebElement message = driver.findElement(By.id("submit-control"));
 
-        Select objectSelect = new Select(animalsSelect);
-//        objectSelect.selectByVisibleText("Avatar");
-//        objectSelect.selectByValue("avatar");
-        objectSelect.selectByIndex(3);
+        Assert.assertEquals("Searched message not found", "Form submited Successfully!", message.getText());
 
         waitAndClose();
     }
 }
+
 
 
 

@@ -8,7 +8,7 @@ JavascriptExecutor js= (JavascriptExecutor) driver;
 Then JavaScript codes are run with the following function.
 js.executeScript("window.scrollBy(0,3000);");
 
-scroll
+Scroll
 window.scrollTo(0, 3000);                       -> scrolls the page up to the given pixel
 window.scrollBy(0, 3000);                       -> scrolls from where it is
 window.scrollTo(0, document.body.scrollHeight); -> scrolls to the end of the page
@@ -36,7 +36,7 @@ JavascriptExecutor js= (JavascriptExecutor) driver;
 Daha sonra aşağıdaki fonksiyon ile JavaScript kodları çalıştırılır.
 js.executeScript("window.scrollBy(0,3000);");
 
-scroll
+Scroll
 window.scrollTo(0, 3000);                        -> verilen pixele kadar sayfayı kaydırır
 window.scrollBy(0, 3000);                        -> bulunduğu yerden itibaren kaydırır
 window.scrollTo(0, document.body.scrollHeight);  -> sayfanın sonuna kadar kaydırır

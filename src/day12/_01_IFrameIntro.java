@@ -1,4 +1,4 @@
-package day11;
+package day12;
 
 
 import org.junit.Test;
@@ -9,7 +9,7 @@ import utility.BaseDriver;
 public class _01_IFrameIntro extends BaseDriver {
 
     @Test
-    public void Test() {
+    public void test() {
 
         driver.get("https://chercher.tech/practice/frames");
 

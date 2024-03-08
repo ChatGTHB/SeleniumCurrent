@@ -1,4 +1,4 @@
-package day11;
+package day12;
 
 
 import org.junit.Test;
@@ -8,10 +8,10 @@ import org.openqa.selenium.WebElement;
 import utility.BaseDriver;
 import utility.MyFunction;
 
-public class _07_JavaScriptClick extends BaseDriver {
+public class _08_JavaScriptClick extends BaseDriver {
 
     @Test
-    public void Test() {
+    public void test() {
 
         driver.get("https://www.copado.com/robotic-testing");
         MyFunction.wait(2);
@@ -23,7 +23,7 @@ public class _07_JavaScriptClick extends BaseDriver {
 
         MyFunction.wait(2);
         // viewAllResearch.click();  // Couldn't click from the top of the page because it was under the top menu
-        js.executeScript("arguments[0].click();", viewAllResearch); // We clicked it with JavaScript code in HTML and it worked
+        js.executeScript("arguments[0].click();", viewAllResearch); // We clicked it with _04_JavaScript code in HTML and it worked
 
         MyFunction.wait(2);
         waitAndClose();

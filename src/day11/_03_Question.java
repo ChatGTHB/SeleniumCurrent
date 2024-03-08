@@ -1,53 +1,49 @@
 package day11;
 
 
+import org.junit.Assert;
 import org.junit.Test;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
-import org.openqa.selenium.support.ui.Select;
+import org.openqa.selenium.support.ui.ExpectedConditions;
 import utility.BaseDriver;
 
 public class _03_Question extends BaseDriver {
 
     /**
-     1-driver.get("https://chercher.tech/practice/frames"); go to page.
-     2-Input the country name
-     3-Check the CheckBox.
-     4-Select the 2nd element of Select.
-     */
-
-    /**
-     * 1-driver.get("https://chercher.tech/practice/frames"); sayfasına gidiniz.
-     * 2-Inputa ülke adı yazınız
-     * 3-CheckBox ı çekleyiniz.
-     * 4-Select in 2.elemanını seçiniz.
+     * Scenario:
+     * 1- Open the site https://www.demoblaze.com/index.html.
+     * 2- Click on the Samsung galaxy s6 link.
+     * 3- Add to cart.
+     * 4- Then click on PRODUCT STORE to return to the main screen.
+     * <p>
+     * ==============================*********************=======================
+     * <p>
+     * Senaryo:
+     * 1- https://www.demoblaze.com/index.html siteyi açınız.
+     * 2- Samsung galaxy s6 linkine tıklayınız.
+     * 3- Sepete ekleyiniz.
+     * 4- Daha Sonra PRODUCT STORE yazısına tıklatarak ana ekrana geri dönünüz.
      */
 
     @Test
-    public void Test() {
+    public void test() {
 
-        driver.get("https://chercher.tech/practice/frames");
+        driver.get("https://www.demoblaze.com/index.html");
 
-        driver.switchTo().frame(0); // Moved to the first frame.
+        WebElement link = driver.findElement(By.linkText("Samsung galaxy s6"));
+        link.click();
 
-        WebElement input = driver.findElement(By.cssSelector("#topic+input"));
-        input.sendKeys("Türkiye");
+        WebElement addToCart = driver.findElement(By.linkText("Add to cart"));
+        addToCart.click();
 
-        // I'm inside the 1st frame right now, I'll go to the frame inside it.
-        // Index 0 because there is only 1
-        driver.switchTo().frame(0);
+        wait.until(ExpectedConditions.alertIsPresent()); // wait until alert appears
+        driver.switchTo().alert().accept();
 
-        WebElement checkBox = driver.findElement(By.id("a"));
-        checkBox.click();
+        WebElement webpage = driver.findElement(By.id("nava"));
+        webpage.click();
 
-//        driver.switchTo().parentFrame();  // One back
-        driver.switchTo().defaultContent(); // Went directly to the home page
-        driver.switchTo().frame(1);   // Moved to frame 2.
-
-        WebElement animalsSelect = driver.findElement(By.id("animals"));
-        Select objectSelect = new Select(animalsSelect);
-        objectSelect.selectByIndex(1); // 2nd element : 1 as index
-
+        Assert.assertEquals("Homepage url not found", "https://www.demoblaze.com/index.html", driver.getCurrentUrl());
 
         waitAndClose();
     }

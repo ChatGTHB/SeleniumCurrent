@@ -1,4 +1,4 @@
-package day11;
+package day12;
 
 
 import org.junit.Test;
@@ -6,10 +6,10 @@ import org.openqa.selenium.JavascriptExecutor;
 import utility.BaseDriver;
 import utility.MyFunction;
 
-public class _05_ScrollToBottomOfThePage extends BaseDriver {
+public class _06_ScrollToBottomOfThePage extends BaseDriver {
 
     @Test
-    public void Test() {
+    public void test() {
 
         driver.get("https://www.selenium.dev/selenium/web/scrolling_tests/frame_with_nested_scrolling_frame_out_of_view.html");
 

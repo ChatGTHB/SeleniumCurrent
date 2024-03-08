@@ -11,11 +11,11 @@ import utility.BaseDriver;
 import java.time.Duration;
 
 
-public class _03_ExplicitWait extends BaseDriver {
+public class _01_ExplicitWait extends BaseDriver {
 
     // ExplicitWait
     @Test
-    public void Test() {
+    public void test() {
 
         driver.get("http://seleniumpractise.blogspot.com/2016/08/how-to-use-explicit-wait-in-selenium.html");
 
@@ -25,7 +25,7 @@ public class _03_ExplicitWait extends BaseDriver {
         // Wait until the text is "Web Driver"
         // In this case, it is necessary to give special criteria to the element.
         WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(5)); // Defined once
-        // Just like Duration, only time and driver were defined.
+        // Just like duration, only time and driver were defined.
         // wait.until(ExpectedConditions.textToBe(By.id("demo"), "WebDriver"));
         wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//p[text()='WebDriver']")));
         // visibilityOfElementLocated : WAIT until this locator appears.
