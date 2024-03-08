@@ -20,11 +20,15 @@ public class _03_AlertPart03 extends BaseDriver {
         clickMe3.click();// alert opened
 
         MyFunction.wait(2);
+        String alertText=driver.switchTo().alert().getText();
+        System.out.println("alertText = " + alertText);  // I reached the alert text
+
         driver.switchTo().alert().sendKeys("Kerem"); // Go to the alert box and send the text "Kerem".
         driver.switchTo().alert().accept(); // alert closed
 
         MyFunction.wait(2);
         WebElement textActual = driver.findElement(By.id("prompt-demo"));
+        System.out.println("textActual.getText() = " + textActual.getText());
 
         Assert.assertTrue("The expected post did not appear", textActual.getText().contains("Kerem"));
 
