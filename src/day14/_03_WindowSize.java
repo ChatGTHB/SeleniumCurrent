@@ -21,9 +21,9 @@ public class _03_WindowSize extends BaseDriver {
 
         MyFunction.wait(5);
         Dimension newDimension = new Dimension(516, 600);
+        driver.manage().window().setSize(newDimension);
         // I bring the window on the screen to the desired dimensions.
         // I start the test like that.
-        driver.manage().window().setSize(newDimension);
 
         //  Tests....
         waitAndClose();
