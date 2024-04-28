@@ -12,7 +12,7 @@ import java.util.Set;
 
 /**
  * Interview Question
- * How do you control windows windows.
+ * How do you control windows.
  * I'll check with ROBOT Class.,
  * <p>
  * **********************************************************************************
@@ -21,7 +21,6 @@ import java.util.Set;
  * Windows pencerelerini nasıl kontrol edersin.
  * ROBOT Class la kontrol ederim.
  */
-
 
 public class _04_RobotIntro extends BaseDriver {
 
