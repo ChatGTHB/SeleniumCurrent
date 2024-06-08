@@ -7,6 +7,7 @@ import utility.BaseDriver;
 import java.util.List;
 
 public class _02_FindingElements_Tag extends BaseDriver {
+
     public static void main(String[] args) {
 
         driver.get("https://www.amazon.com/");
@@ -19,7 +20,6 @@ public class _02_FindingElements_Tag extends BaseDriver {
             if (!e.getText().equals("")) {
                 System.out.println("e.getText() = " + e.getText());
             }
-
         }
         waitAndClose();
     }

@@ -7,6 +7,7 @@ import utility.BaseDriver;
 import utility.MyFunction;
 
 public class _03_Navigating extends BaseDriver {
+
     public static void main(String[] args) {
 
         driver.navigate().to("https://testpages.herokuapp.com/styled/index.html");
