@@ -7,9 +7,7 @@ import org.openqa.selenium.chrome.ChromeDriver;
 import utility.MyFunction;
 
 public class _01_FindingById {
-
     public static void main(String[] args) {
-
         /**
 
          Scenario:
