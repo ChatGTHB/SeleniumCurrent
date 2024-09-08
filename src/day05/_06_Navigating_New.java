@@ -1,5 +1,6 @@
 package day05;
 
+import org.junit.Assert;
 import org.junit.Test;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
@@ -21,6 +22,14 @@ public class _06_Navigating_New extends BaseDriver {
         MyFunction.wait(2);
 
         driver.navigate().forward();
+
+//        if (driver.getCurrentUrl().equals("https://testpages.eviltester.com/styled/alerts/alert-test.html")) {
+//            System.out.println("Test passed.");
+//        } else {
+//            System.out.println("Test failed.");
+//        }
+
+        Assert.assertEquals( "The expected page could not be reached.","https://testpages.eviltester.com/styled/alerts/alert-test.html", driver.getCurrentUrl());
 
         waitAndClose();
     }
