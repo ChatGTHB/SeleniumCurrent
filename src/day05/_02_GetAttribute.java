@@ -4,6 +4,7 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
+import utility.MyFunction;
 
 public class _02_GetAttribute {
     public static void main(String[] args) {
@@ -19,5 +20,8 @@ public class _02_GetAttribute {
         System.out.println("myOrdersLink.href = " + myOrdersLink.getAttribute("href"));
         System.out.println("myOrdersLink.title = " + myOrdersLink.getAttribute("title"));
         System.out.println("myOrdersLink.rel = " + myOrdersLink.getAttribute("rel"));
+
+        MyFunction.wait(5);
+        driver.quit();
     }
 }
