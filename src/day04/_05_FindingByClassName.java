@@ -15,15 +15,14 @@ public class _05_FindingByClassName {
         driver.get("https://www.hepsiburada.com/");
 
 //        WebElement firstName=driver.findElement(By.className("form-textbox")); // find by classname
-//        // If findElement finds more than one element in the same locator, it returns the first one
+//        If findElement finds more than one element in the same locator, it returns the first one
 //        firstName.sendKeys("Kerem");
 
         // Reaching multiple elements according to a certain criterion
         List<WebElement> labels = driver.findElements(By.className("sf-dod-mpQGL"));
-        for (WebElement e : labels) {
-            System.out.println("e.getText() = " + e.getText());
+        for (WebElement element : labels) {
+            System.out.println("element.getText() = " + element.getText());
         }
-
 
         // findElement fails to find element                   : no such element
         // What does findElements do if it can't find elements ?  Returns a List with 0 elements and does not give an error
