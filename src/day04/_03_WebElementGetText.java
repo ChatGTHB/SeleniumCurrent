@@ -8,6 +8,7 @@ import utility.MyFunction;
 
 public class _03_WebElementGetText {
     public static void main(String[] args) {
+
         WebDriver driver = new ChromeDriver();
         driver.get("https://form.jotform.com/221934510376353");
 

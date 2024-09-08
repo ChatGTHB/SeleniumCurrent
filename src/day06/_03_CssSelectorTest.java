@@ -11,7 +11,6 @@ public class _03_CssSelectorTest extends BaseDriver {
 
     @Test  // You are the test; you don't need a main method
     public void Test1() {
-
         driver.get("http://demo.seleniumeasy.com/basic-first-form-demo.html");
 
         String message = "Hello Selenium!";
