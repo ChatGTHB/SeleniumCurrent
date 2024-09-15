@@ -1,4 +1,90 @@
+
+CSS Selector Notes:
+
+Basic Selectors:
+- div[id='message'][type='text']: Selects a div element with both id='message' and type='text' attributes.
+- #id: Selects elements by their id.
+- .class: Selects elements by their class.
+
+Child and Sibling Selectors:
+- > : Selects direct children of an element.
+  Example: div > span selects only the direct span children of a div.
+- (space): Selects all descendants (children, grandchildren, etc.) of an element.
+  Example: div span selects all span elements inside a div.
+- + : Selects the adjacent sibling (element immediately after).
+  Example: div + p selects the p element immediately following a div.
+- ~ : Selects all sibling elements after the given element.
+  Example: div ~ p selects all p siblings after the div.
+
+:nth-child() Selector:
+- :nth-child(5): Selects the 5th child of its parent.
+
+Attribute Selectors:
+- ^ : Selects elements whose attribute value starts with a specific string.
+  Example: [id^='u'] selects elements with id starting with u.
+- $ : Selects elements whose attribute value ends with a specific string.
+  Example: [id$='u'] selects elements with id ending in u.
+- * : Selects elements whose attribute value contains a specific string.
+  Example: [id*='u'] selects elements with id containing the letter u.
+
+HTML Structure Example:
+
+<div>
+    <span> merhaba 1 </span>
+    <span> merhaba 2 </span>
+    <div>
+       <img src="logo.png">
+       <input type="text">
+    </div>
+</div>
+
+<div id="form">
+    <span> merhaba 1 </span> <!-- child -->
+    <span> merhaba 2 </span> <!-- child -->
+    <div> <!-- child -->
+       <img src="logo.png">  <!-- grandchild -->
+       <input type="text">   <!-- grandchild -->
+    </div>
+</div>
+
+Selectors Explanation:
+- div > span: Selects the direct child span elements inside any div.
+  - Matches both span elements inside the div.
+- div span: Selects all descendants (span, img, input elements) inside any div.
+  - Includes grandchildren (img, input).
+- [id='form'] > span: Selects only the direct span children inside the element with id='form'.
+- [id='form'] img: Selects all img elements within the element with id='form', including grandchildren.
+
+Sibling and Attribute Examples:
+
+<div id="form">
+    <span id="m1"> merhaba 1 </span>
+    <span> merhaba 2 </span> <!-- adjacent sibling -->
+    <div>
+       <img src="logo.png">
+       <input type="text">
+    </div>
+</div>
+
+Sibling Selectors:
+- [id='m1']+span: Selects the adjacent sibling span following the span with id='m1'.
+- [id='m1']+span+div: Selects the next div sibling immediately after the span adjacent to m1.
+- [id='m1']~div: Selects all div siblings following the span with id='m1'.
+
+Attribute Selector Examples (for IDs):
+
+<div id="u_7_bcC"></div>
+<div id="u_3_blX"></div>
+<div id="u_3_b8m"></div>
+
+- [id^='u']: Selects elements with id starting with u.
+- [id$='_u']: Selects elements with id ending with _u.
+- [id*='u']: Selects elements with id containing the letter u.
+
+************************************************
+
 CSS Selector
+
 div[id='message'][type='text']
 
 #id, .class
