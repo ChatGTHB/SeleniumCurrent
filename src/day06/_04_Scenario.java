@@ -7,7 +7,7 @@ import org.openqa.selenium.WebElement;
 import utility.BaseDriver;
 import utility.MyFunction;
 
-public class _04_Homework extends BaseDriver {
+public class _04_Scenario extends BaseDriver {
 
     /**
      * 1- Open https://formsmarts.com/form/yu?mode=h5
@@ -22,7 +22,6 @@ public class _04_Homework extends BaseDriver {
 
     @Test
     public void formTest() {
-
         driver.get("https://formsmarts.com/form/yu?mode=h5");
 
         MyFunction.wait(2);
