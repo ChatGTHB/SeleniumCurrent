@@ -125,7 +125,7 @@ $ ile biten
 
 </div>
 
-div cocukları :  çocukları -> span,span,div   >
+div cocukları     : çocukları -> span,span,div   >
 div tüm çocukları : çocuk+torun
 
 [id='form'] > span -> cocuklarından
