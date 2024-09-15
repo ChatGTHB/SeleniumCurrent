@@ -1,30 +1,62 @@
 package day06;
 
-
+import org.junit.Test;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
 import utility.BaseDriver;
+import utility.MyFunction;
 
 public class _02_CssSelector extends BaseDriver {
 
-    public static void main(String[] args) {
+    /**
+     * 1- Open https://formsmarts.com/form/yu?mode=h5
+     * 2- Checked the Business.
+     * 3- Click on discover XYZ and select Online Advertising
+     * 4- Choose every day
+     * 5- Choose good
+     * 6- Click using XYZ and choose option 3
+     * Css selector
+     * Put MyFunction.wait(2); between each click vs action
+     */
 
-        driver.get("http://demo.seleniumeasy.com/basic-first-form-demo.html");
+    @Test
+    public void formTest() {
+        driver.get("https://formsmarts.com/form/yu?mode=h5");
 
-        String message = "Hello Selenium!";
+        MyFunction.wait(2);
+        WebElement business = driver.findElement(By.cssSelector("[type='radio'][value='Business']"));
+        business.click();
 
-        WebElement textBox = driver.findElement(By.cssSelector("input[id='user-message']"));
-        textBox.sendKeys(message);
+        MyFunction.wait(2);
+        WebElement dropDownDiscover = driver.findElement(By.cssSelector("select[id$='_4588']"));
+        dropDownDiscover.click();
 
-        WebElement button = driver.findElement(By.cssSelector("[onclick='showInput();']"));
-        button.click();
+        MyFunction.wait(2);
+        WebElement optionOnlineAdvertising = driver.findElement(By.cssSelector("[id$='_4588'] > :nth-child(4)"));
+        optionOnlineAdvertising.click();
 
-        WebElement message2 = driver.findElement(By.cssSelector("[id='display']"));
+        MyFunction.wait(2);
+        WebElement everyDayRadio = driver.findElement(By.cssSelector("[type='radio'][value='Every Day']"));
+        everyDayRadio.click();
 
-        if (message2.getText().contains(message))
-            System.out.println("Test Passed");
-        else
-            System.out.println("Test Failed");
+        MyFunction.wait(2);
+        WebElement goodRadio = driver.findElement(By.cssSelector("[type='radio'][value='Good']"));
+        goodRadio.click();
+
+        MyFunction.wait(2);
+        WebElement dropdownHowLong = driver.findElement(By.cssSelector("select[id$='_4597']"));
+        dropdownHowLong.click();
+
+//        option[value*='using XYZ for a month or more']
+//        option[value$='using XYZ for a month or more']
+//        select[id$='_4597']> :nth-child(4)
+
+        MyFunction.wait(2);
+        WebElement option3 = driver.findElement(By.cssSelector("select[id$='_4597']> :nth-child(4)"));
+        option3.click();
+
+        MyFunction.wait(2);
+        goodRadio.click();
 
         waitAndClose();
     }
