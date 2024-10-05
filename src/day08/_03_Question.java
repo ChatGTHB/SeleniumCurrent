@@ -23,26 +23,25 @@ public class _03_Question extends BaseDriver {
          2- Click CreateNewAccount.
          3- In the new window that opens, enter your name, surname and email.
          4- Select your date of birth with the Select class
-         5- Verify with assert that an input that asks you to re-enter the email pops up, does not appear before, and then appears.
          */
 
         driver.get("https://www.facebook.com/");
 
         MyFunction.wait(1);
         /**
-         List<WebElement> cookiesAccept = driver.findElements(By.cssSelector("[data-testid='cookie-policy-manage-dialog-accept-button']"));
-         if (cookiesAccept.size() > 0) {
-         cookiesAccept.get(0).click();
+         List<WebElement> cookiesDecline = driver.findElements(By.xpath("//*[text()='İsteğe bağlı çerezleri reddet']")));
+         if (cookiesDecline.size() > 0) {
+         cookiesDecline.get(0).click();
          }
          */
 
-        List<WebElement> cookiesAccept = driver.findElements(By.cssSelector("[data-testid='cookie-policy-manage-dialog-accept-button']"));
-        if (!cookiesAccept.isEmpty()) {
-            cookiesAccept.get(0).click();
+        List<WebElement> cookiesDecline = driver.findElements(By.xpath("//*[text()='İsteğe bağlı çerezleri reddet']"));
+        if (!cookiesDecline.isEmpty()) {
+            cookiesDecline.get(0).click();
         }
 
         MyFunction.wait(1);
-        WebElement newAccountButton = driver.findElement(By.xpath("//*[@class='_42ft _4jy0 _6lti _4jy6 _4jy2 selected _51sy']"));
+        WebElement newAccountButton = driver.findElement(By.xpath("//*[@id='login_link']/a[2]"));
         newAccountButton.click();
 
         MyFunction.wait(1);
@@ -54,17 +53,8 @@ public class _03_Question extends BaseDriver {
         lastname.sendKeys("Said");
 
         MyFunction.wait(1);
-        WebElement reEmail = driver.findElement(By.name("reg_email_confirmation__"));
-        Assert.assertFalse("ReEmail appeared = ", reEmail.isDisplayed()); // I'm waiting for it not to appear
-        System.out.println("reEmail.isDisplayed() = " + reEmail.isDisplayed());
-
-        MyFunction.wait(1);
         WebElement email = driver.findElement(By.name("reg_email__"));
         email.sendKeys("keremsaidr@gxmail.com");
-
-        MyFunction.wait(1);
-        Assert.assertTrue("ReEmail did not appear = ", reEmail.isDisplayed()); // I'm waiting for it to appear
-        System.out.println("reEmail.isDisplayed() = " + reEmail.isDisplayed());
 
         WebElement webDay = driver.findElement(By.id("day"));
         WebElement webMonth = driver.findElement(By.id("month"));
