@@ -28,7 +28,6 @@ public class Exercise06 extends BaseDriver {
 
     @Test
     public void Test() {
-
         driver.get("https://www.google.com/");
 
         List<WebElement> cookiesAccept = driver.findElements(By.xpath("//button[@id='L2AGLb']"));

@@ -29,7 +29,6 @@ public class Exercise02 extends BaseDriver {
 
     @Test
     public void cartTest01() {
-
         driver.get("https://www.saucedemo.com/");
 
         MyFunction.wait(1);

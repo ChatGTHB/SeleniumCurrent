@@ -20,7 +20,6 @@ public class Exercise01 extends BaseDriver {
 
     @Test
     public void formTest() {
-
         driver.get("https://formsmarts.com/form/yu?mode=h5");
 
         WebElement business = driver.findElement(By.cssSelector("[type='radio'][value='Business']"));

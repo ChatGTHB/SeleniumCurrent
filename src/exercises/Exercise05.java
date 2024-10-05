@@ -27,7 +27,6 @@ public class Exercise05 extends BaseDriver {
 
     @Test
     public void test() {
-
         driver.get("https://www.demoblaze.com/index.html");
 
         WebElement link = driver.findElement(By.linkText("Samsung galaxy s6"));

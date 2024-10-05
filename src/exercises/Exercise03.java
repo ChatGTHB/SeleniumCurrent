@@ -24,7 +24,6 @@ public class Exercise03 extends BaseDriver {
 
     @Test
     public void test() {
-
         driver.get("https://www.facebook.com/");
 
 //        List<WebElement> cookiesAccept = driver.findElements(By.xpath("//button[text()='Allow all cookies']"));

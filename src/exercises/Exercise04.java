@@ -31,7 +31,6 @@ public class Exercise04 extends BaseDriver {
 
     @Test
     public void test() {
-
         driver.get("http://demo.seleniumeasy.com/ajax-form-submit-demo.html");
 
         WebElement title = driver.findElement(By.id("title"));
