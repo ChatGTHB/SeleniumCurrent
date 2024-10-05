@@ -1,6 +1,5 @@
 package day14;
 
-
 import org.junit.Test;
 import org.openqa.selenium.Dimension;
 import utility.BaseDriver;
