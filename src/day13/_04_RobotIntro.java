@@ -26,7 +26,6 @@ public class _04_RobotIntro extends BaseDriver {
 
     @Test
     public void Test() throws AWTException {
-
         driver.get("https://www.google.com/");
         MyFunction.wait(2);
 

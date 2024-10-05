@@ -10,7 +10,6 @@ public class _06_ScrollToBottomOfThePage extends BaseDriver {
 
     @Test
     public void test() {
-
         driver.get("https://www.selenium.dev/selenium/web/scrolling_tests/frame_with_nested_scrolling_frame_out_of_view.html");
 
         JavascriptExecutor js = (JavascriptExecutor) driver;

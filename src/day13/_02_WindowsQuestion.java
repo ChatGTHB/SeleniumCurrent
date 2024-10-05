@@ -29,7 +29,6 @@ public class _02_WindowsQuestion extends BaseDriver {
 
     @Test
     public void test() {
-
         driver.get("https://www.selenium.dev/");
 
         JavascriptExecutor js = (JavascriptExecutor) driver;

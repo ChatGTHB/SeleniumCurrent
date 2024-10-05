@@ -18,7 +18,6 @@ public class _05_RobotFileUpload extends BaseDriver {
 
     @Test
     public void test() throws AWTException {
-
         driver.get("http://demo.guru99.com/test/upload/");
         MyFunction.wait(1);
 

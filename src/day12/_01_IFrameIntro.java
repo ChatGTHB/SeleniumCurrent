@@ -10,7 +10,6 @@ public class _01_IFrameIntro extends BaseDriver {
 
     @Test
     public void test() {
-
         driver.get("https://chercher.tech/practice/frames");
 
         long startTime = System.currentTimeMillis();

@@ -12,7 +12,6 @@ public class _08_JavaScriptClick extends BaseDriver {
 
     @Test
     public void test() {
-
         driver.get("https://www.copado.com/robotic-testing");
         MyFunction.wait(2);
 

@@ -1,12 +1,10 @@
 package day13;
 
-
 import org.junit.Test;
 import org.openqa.selenium.By;
 import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebElement;
 import utility.BaseDriver;
-import utility.MyFunction;
 
 import java.util.List;
 import java.util.Set;
@@ -15,9 +13,7 @@ public class _01_WindowsIntro extends BaseDriver {
 
     @Test
     public void test() {
-
         // Each tab in the browser is called a window in Selenium
-
         driver.get("https://www.selenium.dev/");
 
         JavascriptExecutor js = (JavascriptExecutor) driver;

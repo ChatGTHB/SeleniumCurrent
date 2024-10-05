@@ -12,7 +12,6 @@ public class _07_ScrollToWebElement extends BaseDriver {
 
     @Test
     public void test() {
-
         driver.get("https://www.selenium.dev/selenium/web/scrolling_tests/frame_with_nested_scrolling_frame_out_of_view.html");
         MyFunction.wait(2);
 
