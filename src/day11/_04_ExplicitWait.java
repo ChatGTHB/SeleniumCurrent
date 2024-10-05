@@ -11,12 +11,11 @@ import utility.BaseDriver;
 import java.time.Duration;
 
 
-public class _01_ExplicitWait extends BaseDriver {
+public class _04_ExplicitWait extends BaseDriver {
 
     // ExplicitWait
     @Test
     public void test() {
-
         driver.get("http://seleniumpractise.blogspot.com/2016/08/how-to-use-explicit-wait-in-selenium.html");
 
         WebElement button = driver.findElement(By.xpath("//button[@onclick='timedText()']"));

@@ -12,7 +12,7 @@ import utility.MyFunction;
 
 import java.util.List;
 
-public class _04_Question extends BaseDriver {
+public class _07_Question extends BaseDriver {
 
     /**
      * Scenario:
@@ -24,7 +24,6 @@ public class _04_Question extends BaseDriver {
 
     @Test
     public void test() {
-
         driver.get("https://www.google.com/");
         MyFunction.wait(2);
 

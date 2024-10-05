@@ -8,7 +8,7 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import utility.BaseDriver;
 
-public class _03_Question extends BaseDriver {
+public class _06_Question extends BaseDriver {
 
     /**
      * Scenario:
@@ -28,7 +28,6 @@ public class _03_Question extends BaseDriver {
 
     @Test
     public void test() {
-
         driver.get("https://www.demoblaze.com/index.html");
 
         WebElement link = driver.findElement(By.linkText("Samsung galaxy s6"));
