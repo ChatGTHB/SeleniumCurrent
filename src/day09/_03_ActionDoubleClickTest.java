@@ -14,14 +14,13 @@ import java.util.List;
 public class _03_ActionDoubleClickTest extends BaseDriver {
 
     @Test
-    public void test() {
-
+    public void actionDoubleClickTest () {
         driver.get("https://demoqa.com/buttons");
 
-        List<WebElement> consent = driver.findElements(By.xpath("//button[@class='fc-button fc-cta-consent fc-primary-button']//p"));
-        if (!consent.isEmpty()) {
-            consent.get(0).click();
-        }
+//        List<WebElement> consent = driver.findElements(By.xpath("//button[@class='fc-button fc-cta-consent fc-primary-button']//p"));
+//        if (!consent.isEmpty()) {
+//            consent.get(0).click();
+//        }
 
         WebElement doubleClickButton = driver.findElement(By.id("doubleClickBtn"));
         MyFunction.wait(2);

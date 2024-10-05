@@ -13,19 +13,17 @@ public class _05_ActionHoverTest extends BaseDriver {
 
     @Test
     public void test() {
-
         driver.get("https://www.hepsiburada.com/");
 
-        WebElement element = driver.findElement(By.xpath("//span[text()='Moda']"));
+        Actions actions = new Actions(driver);
         MyFunction.wait(2);
 
-        Actions actions = new Actions(driver);
+        WebElement element = driver.findElement(By.xpath("//span[text()='Moda']"));
         Action action = actions.moveToElement(element).build(); // hover over element
         action.perform(); // enable it.
 
         // new Actions(driver).moveToElement(element).build().perform();
 
-        MyFunction.wait(2);
         waitAndClose();
     }
 }

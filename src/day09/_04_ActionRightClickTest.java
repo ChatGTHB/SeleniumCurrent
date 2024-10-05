@@ -15,13 +15,12 @@ public class _04_ActionRightClickTest extends BaseDriver {
 
     @Test
     public void test() {
-
         driver.get("https://demoqa.com/buttons");
 
-        List<WebElement> consent = driver.findElements(By.xpath("//button[@class='fc-button fc-cta-consent fc-primary-button']//p"));
-        if (!consent.isEmpty()) {
-            consent.get(0).click();
-        }
+//        List<WebElement> consent = driver.findElements(By.xpath("//button[@class='fc-button fc-cta-consent fc-primary-button']//p"));
+//        if (!consent.isEmpty()) {
+//            consent.get(0).click();
+//        }
 
         WebElement rightClickButton = driver.findElement(By.id("rightClickBtn"));
         MyFunction.wait(2);

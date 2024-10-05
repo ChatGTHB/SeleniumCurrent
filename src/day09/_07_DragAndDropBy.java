@@ -15,7 +15,6 @@ public class _07_DragAndDropBy extends BaseDriver {
 
     @Test
     public void test() {
-
         Actions actions = new Actions(driver);
 
         // dragAndDropBy: Scrolls the WebElement vertically or horizontally.

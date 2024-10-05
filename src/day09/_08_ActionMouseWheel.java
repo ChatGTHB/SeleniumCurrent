@@ -11,7 +11,6 @@ import utility.MyFunction;
 public class _08_ActionMouseWheel extends BaseDriver {
     @Test
     public void mouseWheelTest1() {
-
         // scroll to element
         driver.get("https://www.selenium.dev/selenium/web/scrolling_tests/frame_with_nested_scrolling_frame_out_of_view.html");
         WebElement iframe = driver.findElement(By.name("nested_scrolling_frame"));
@@ -28,7 +27,6 @@ public class _08_ActionMouseWheel extends BaseDriver {
 
     @Test
     public void mouseWheelTest2() {
-
         // scroll a certain amount
         driver.get("https://www.selenium.dev/selenium/web/scrolling_tests/frame_with_nested_scrolling_frame_out_of_view.html");
         MyFunction.wait(2);
@@ -43,7 +41,6 @@ public class _08_ActionMouseWheel extends BaseDriver {
 
     @Test
     public void mouseWheelTest3() {
-
         // step by step scroll up to a certain element
         driver.get("https://www.selenium.dev/selenium/web/scrolling_tests/frame_with_nested_scrolling_frame_out_of_view.html");
         MyFunction.wait(2);

@@ -12,12 +12,11 @@ public class _06_ActionDragAndDropTest extends BaseDriver {
 
     @Test
     public void test() {
-
         driver.get("http://www.dhtmlgoodies.com/scripts/drag-drop-custom/demo-drag-drop-3.html");
 
         Actions actions = new Actions(driver);
-
         MyFunction.wait(2);
+
         WebElement oslo = driver.findElement(By.id("box1"));
         WebElement norway = driver.findElement(By.id("box101"));
 
