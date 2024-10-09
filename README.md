@@ -5,7 +5,6 @@
 ![JUnit](https://img.shields.io/badge/JUnit-25A162?style=for-the-badge&logo=junit5&logoColor=white)
 ![GitHub last commit](https://img.shields.io/github/last-commit/ChatGTHB/JavaPatikaProjects?style=for-the-badge)
 
-
 ## 💡 Introduction
 Welcome to the **SeleniumCurrent** repository! This project is designed to provide current training and tutorials on Selenium, a powerful tool for web automation. This repository includes code samples, exercises, and documentation to help users get started with Selenium and improve their automation skills.
 
