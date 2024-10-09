@@ -47,7 +47,7 @@ Welcome to the **SeleniumCurrent** repository! This project is designed to provi
 - 14-day structured learning plan.
 
 ## 📦 Dependencies
-- Java
+- Java JDK 11 or newer
 - Selenium WebDriver
 - JUnit (comes with Java, no additional installation needed)
 - Commons IO
